@@ -14,13 +14,15 @@ for _, workspace_name in ipairs(workspace_names) do
     icon = {
       font = { family = settings.font.numbers },
       string = workspace_name,
-      padding_left = 15,
+      padding_left = 8,
       padding_right = 8,
       color = colors.white,
       highlight_color = colors.red,
     },
     label = {
-      padding_right = 20,
+      width = 0,
+      padding_left = 0,
+      padding_right = 0,
       color = colors.grey,
       highlight_color = colors.white,
       font = "sketchybar-app-font:Regular:16.0",
@@ -90,7 +92,13 @@ local function update_app_icons()
         end
       end
 
-      workspace_items[workspace_name]:set({ label = table.concat(application_icons, " ") })
+      workspace_items[workspace_name]:set({
+        label = {
+          string = table.concat(application_icons, " "),
+          width = #application_icons > 0 and "dynamic" or 0,
+          padding_right = #application_icons > 0 and 8 or 0,
+        }
+      })
     end)
   end
 end
