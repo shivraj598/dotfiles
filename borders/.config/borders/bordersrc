@@ -1,0 +1,22 @@
+#!/bin/bash
+
+# ============================================================
+# JANKYBORDERS CONFIGURATION
+# File: ~/.config/borders/bordersrc
+# ============================================================
+
+# Light green: #90EE90
+# JankyBorders color format: 0xAARRGGBB
+# FF = fully opaque
+# 90EE90 = light green
+
+options=(
+    style=round
+    width=5.0
+    hidpi=on
+    active_color=0xff90EE90
+    inactive_color=0x00313A31
+    background_color=0x00000000
+)
+
+borders "${options[@]}"

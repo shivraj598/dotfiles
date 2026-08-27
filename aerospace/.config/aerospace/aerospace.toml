@@ -1,0 +1,496 @@
+# ============================================================
+# AEROSPACE CONFIGURATION
+# Recommended file:
+# ~/.config/aerospace/aerospace.toml
+#
+# Do not keep another AeroSpace config at ~/.aerospace.toml
+# at the same time, because AeroSpace reports ambiguous config
+# locations when both files exist.
+# ============================================================
+
+
+# ============================================================
+# CONFIGURATION VERSION
+# ============================================================
+
+config-version = 2
+
+
+# ============================================================
+# STARTUP
+# ============================================================
+
+# Start AeroSpace automatically when logging into macOS.
+start-at-login = true
+
+# Automatically reload this configuration whenever it is saved.
+#
+# After adding this option for the first time, manually reload
+# AeroSpace once. Future configuration changes will then reload
+# automatically.
+auto-reload-config = true
+
+# Commands executed after logging into the macOS user session.
+after-login-command = []
+
+# Start JankyBorders after AeroSpace starts.
+after-startup-command = [
+    'exec-and-forget borders active_color=0xffe1e3e4 inactive_color=0xff494d64 width=5.0'
+]
+
+
+# ============================================================
+# SKETCHYBAR INTEGRATION
+# ============================================================
+
+# Notify SketchyBar whenever the focused AeroSpace workspace
+# changes.
+#
+# SketchyBar must listen to the custom event:
+# aerospace_workspace_change
+exec-on-workspace-change = [
+    '/bin/bash',
+    '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE="$AEROSPACE_FOCUSED_WORKSPACE" PREV_WORKSPACE="$AEROSPACE_PREV_WORKSPACE"'
+]
+
+
+# ============================================================
+# WORKSPACES
+# ============================================================
+
+# I = IDE
+# B = Browser
+# T = Terminal
+#
+# 1-5 = Additional workspaces
+persistent-workspaces = [
+    'I',
+    'B',
+    'T',
+    '1',
+    '2',
+    '3',
+    '4',
+    '5'
+]
+
+
+
+
+# ============================================================
+# CONTAINER NORMALIZATION
+# ============================================================
+
+# Automatically flatten unnecessary nested containers.
+enable-normalization-flatten-containers = true
+
+# Normalize opposite orientations in nested containers.
+enable-normalization-opposite-orientation-for-nested-containers = true
+
+
+# ============================================================
+# DEFAULT LAYOUT
+# ============================================================
+
+# Padding used for accordion layouts.
+accordion-padding = 30
+
+# New workspaces use tiled layout.
+default-root-container-layout = 'tiles'
+
+# Automatically choose horizontal or vertical orientation
+# according to the monitor dimensions.
+default-root-container-orientation = 'auto'
+
+
+# ============================================================
+# MOUSE BEHAVIOR
+# ============================================================
+
+# Move the mouse to the center of a monitor when keyboard focus
+# changes to that monitor.
+on-focused-monitor-changed = [
+    'move-mouse monitor-lazy-center'
+]
+
+# Move the mouse to the center of the focused window whenever
+# focus changes between windows.
+on-focus-changed = 'move-mouse window-lazy-center'
+
+
+# ============================================================
+# MACOS BEHAVIOR
+# ============================================================
+
+# Automatically unhide applications hidden through macOS.
+automatically-unhide-macos-hidden-apps = true
+
+
+# ============================================================
+# KEYBOARD MAPPING
+# ============================================================
+
+[key-mapping]
+
+preset = 'qwerty'
+
+
+# ============================================================
+# WINDOW GAPS
+# ============================================================
+
+[gaps]
+
+# Space between tiled windows.
+inner.horizontal = 8
+inner.vertical = 8
+
+# Space between windows and the monitor edges.
+outer.left = 4
+outer.bottom = 4
+outer.right = 4
+
+# Keep the original conditional top gap.
+outer.top = [
+    { monitor."Built-in Retina Display" = 10 },
+    40
+]
+
+
+# ============================================================
+# MAIN KEYBOARD SHORTCUTS
+# ============================================================
+
+[mode.main.binding]
+
+
+# ============================================================
+# WINDOW LAYOUTS
+# ============================================================
+
+# Option + Slash
+# Toggle tiled layout orientation.
+alt-slash = 'layout tiles horizontal vertical'
+
+# Option + Comma
+# Toggle accordion layout orientation.
+alt-comma = 'layout accordion horizontal vertical'
+
+# Option + F
+# Toggle AeroSpace fullscreen mode.
+alt-f = 'fullscreen'
+
+# Option + Shift + Space
+# Toggle the focused window between floating and tiled.
+alt-shift-space = 'layout floating tiling'
+
+# Option + Equal
+# Balance the sizes of all tiled windows.
+alt-equal = 'balance-sizes'
+
+
+# ============================================================
+# FOCUS WINDOWS
+# Option + H/J/K/L
+# ============================================================
+
+alt-h = 'focus left'
+alt-j = 'focus down'
+alt-k = 'focus up'
+alt-l = 'focus right'
+
+
+# ============================================================
+# MOVE WINDOWS
+# Option + Shift + H/J/K/L
+# ============================================================
+
+alt-shift-h = 'move left'
+alt-shift-j = 'move down'
+alt-shift-k = 'move up'
+alt-shift-l = 'move right'
+
+
+# ============================================================
+# RESIZE WINDOWS
+# ============================================================
+
+# Option + Minus decreases the focused window size.
+alt-minus = 'resize smart -50'
+
+# Option + Shift + Equal increases the focused window size.
+#
+# This avoids conflicting with Option + Equal, which is used
+# above for balancing all window sizes.
+alt-shift-equal = 'resize smart +50'
+
+
+# ============================================================
+# SWITCH WORKSPACES
+# ============================================================
+
+# Option + I opens the IDE workspace.
+alt-i = 'workspace I'
+
+# Option + B opens the Browser workspace.
+alt-b = 'workspace B'
+
+# Option + T opens the Terminal workspace.
+alt-t = 'workspace T'
+
+# Option + Number opens an additional workspace.
+alt-1 = 'workspace 1'
+alt-2 = 'workspace 2'
+alt-3 = 'workspace 3'
+alt-4 = 'workspace 4'
+alt-5 = 'workspace 5'
+
+
+# ============================================================
+# MOVE WINDOWS TO WORKSPACES
+# ============================================================
+
+# Option + Shift + I
+# Move the focused window to the IDE workspace and follow it.
+alt-shift-i = 'move-node-to-workspace I --focus-follows-window'
+
+# Option + Shift + B
+# Move the focused window to the Browser workspace and follow it.
+alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
+
+# Option + Shift + T
+# Move the focused window to the Terminal workspace and follow it.
+alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
+
+# Option + Shift + Number
+# Move the focused window to an additional workspace and follow it.
+alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
+alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
+alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
+alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
+alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
+
+
+# ============================================================
+# WORKSPACE NAVIGATION
+# ============================================================
+
+# Option + Tab
+# Move between the current and previously focused workspace.
+alt-tab = 'workspace-back-and-forth'
+
+# Option + Shift + Tab
+# Move the current workspace to the next monitor.
+alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
+
+
+# ============================================================
+# SERVICE MODE
+# ============================================================
+
+# Option + Shift + Semicolon enters service mode.
+alt-shift-semicolon = 'mode service'
+
+
+# ============================================================
+# SERVICE MODE SHORTCUTS
+# ============================================================
+
+[mode.service.binding]
+
+# Escape reloads the config and returns to main mode.
+esc = [
+    'reload-config',
+    'mode main'
+]
+
+# R flattens the current workspace tree and returns to main mode.
+r = [
+    'flatten-workspace-tree',
+    'mode main'
+]
+
+# F toggles floating/tiling and returns to main mode.
+f = [
+    'layout floating tiling',
+    'mode main'
+]
+
+# Backspace closes every window except the focused window.
+backspace = [
+    'close-all-windows-but-current',
+    'mode main'
+]
+
+
+# ============================================================
+# JOIN WINDOWS
+# ============================================================
+
+# H joins with the container on the left.
+h = [
+    'join-with left',
+    'mode main'
+]
+
+# J joins with the container below.
+j = [
+    'join-with down',
+    'mode main'
+]
+
+# K joins with the container above.
+k = [
+    'join-with up',
+    'mode main'
+]
+
+# L joins with the container on the right.
+l = [
+    'join-with right',
+    'mode main'
+]
+
+
+
+
+# ============================================================
+# AUTOMATIC APPLICATION ASSIGNMENT
+# ============================================================
+
+
+# ============================================================
+# TERMINALS -> T
+# ============================================================
+
+# Ghostty
+[[on-window-detected]]
+if.app-id = 'com.mitchellh.ghostty'
+run = 'move-node-to-workspace T'
+
+# Apple Terminal
+[[on-window-detected]]
+if.app-id = 'com.apple.Terminal'
+run = 'move-node-to-workspace T'
+
+# iTerm2
+[[on-window-detected]]
+if.app-id = 'com.googlecode.iterm2'
+run = 'move-node-to-workspace T'
+
+# WezTerm
+[[on-window-detected]]
+if.app-id = 'com.github.wez.wezterm'
+run = 'move-node-to-workspace T'
+
+
+# ============================================================
+# IDES AND DEVELOPMENT APPLICATIONS -> I
+# ============================================================
+
+# Visual Studio Code
+[[on-window-detected]]
+if.app-id = 'com.microsoft.VSCode'
+run = 'move-node-to-workspace I'
+
+# Cursor using its application ID
+[[on-window-detected]]
+if.app-id = 'com.todesktop.230313mzl4w4u92'
+run = 'move-node-to-workspace I'
+
+# Cursor fallback rule in case its application ID changes
+[[on-window-detected]]
+if.app-name-regex-substring = '^Cursor$'
+run = 'move-node-to-workspace I'
+
+# Zed
+[[on-window-detected]]
+if.app-id = 'dev.zed.Zed'
+run = 'move-node-to-workspace I'
+
+# VSCodium
+[[on-window-detected]]
+if.app-id = 'com.vscodium'
+run = 'move-node-to-workspace I'
+
+# Windsurf
+[[on-window-detected]]
+if.app-id = 'com.exafunction.windsurf'
+run = 'move-node-to-workspace I'
+
+# Apple iPhone Simulator
+[[on-window-detected]]
+if.app-id = 'com.apple.iphonesimulator'
+run = [
+    'move-node-to-workspace I',
+    'layout tiling'
+]
+
+
+# ============================================================
+# BROWSERS -> B
+# ============================================================
+
+# Safari
+[[on-window-detected]]
+if.app-id = 'com.apple.Safari'
+run = 'move-node-to-workspace B'
+
+# Google Chrome
+[[on-window-detected]]
+if.app-id = 'com.google.Chrome'
+run = 'move-node-to-workspace B'
+
+# Brave Browser
+[[on-window-detected]]
+if.app-id = 'com.brave.Browser'
+run = 'move-node-to-workspace B'
+
+# Arc Browser
+[[on-window-detected]]
+if.app-id = 'company.thebrowser.Browser'
+run = 'move-node-to-workspace B'
+
+# Chromium
+[[on-window-detected]]
+if.app-id = 'org.chromium.Chromium'
+run = 'move-node-to-workspace B'
+
+# Zen Browser
+[[on-window-detected]]
+if.app-id = 'app.zen-browser.zen'
+run = 'move-node-to-workspace B'
+
+
+# ============================================================
+# FLOATING APPLICATIONS
+# ============================================================
+
+# Shottr should open as a floating window.
+[[on-window-detected]]
+if.app-id = 'cc.ffitch.shottr'
+run = 'layout floating'
+
+
+
+
+# ============================================================
+# WORKSPACE TO MONITOR ASSIGNMENT
+# IMPORTANT: KEEP THIS AT THE ABSOLUTE BOTTOM OF THE FILE
+# ============================================================
+
+[workspace-to-monitor-force-assignment]
+
+# Always use the MacBook display.
+I = 'Built-in Retina Display'
+B = 'Built-in Retina Display'
+T = 'Built-in Retina Display'
+
+# Prefer the external monitor.
+# Fall back to the MacBook when the external monitor is absent.
+1 = ['secondary', 'Built-in Retina Display']
+2 = ['secondary', 'Built-in Retina Display']
+3 = ['secondary', 'Built-in Retina Display']
+4 = ['secondary', 'Built-in Retina Display']
+5 = ['secondary', 'Built-in Retina Display']
