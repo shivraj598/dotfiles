@@ -1,0 +1,5 @@
+# Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
+background-opacity = 0.20
+
+# Adds a beautiful native macOS frosted glass blur behind the text
+background-blur = true
