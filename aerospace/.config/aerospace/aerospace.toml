@@ -99,9 +99,8 @@ accordion-padding = 30
 # New workspaces use tiled layout.
 default-root-container-layout = 'tiles'
 
-# Automatically choose horizontal or vertical orientation
-# according to the monitor dimensions.
-default-root-container-orientation = 'auto'
+# Open new tiled windows left/right by default.
+default-root-container-orientation = 'horizontal'
 
 
 # ============================================================
