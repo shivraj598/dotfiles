@@ -3,3 +3,6 @@ background-opacity = 0.20
 
 # Adds a beautiful native macOS frosted glass blur behind the text
 background-blur = true
+
+# Tells other apps your native terminal type for perfect compatibility
+term = "xterm-ghostty"
