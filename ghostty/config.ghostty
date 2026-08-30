@@ -1,3 +1,8 @@
+# --- Font Fixes for Spacing Glitches ---
+font-family = "SF Mono"
+font-size = 13
+
+# --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
 background-opacity = 0.20
 
