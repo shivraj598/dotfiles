@@ -10,6 +10,25 @@ My dotfiles are managed using GNU Stow.
 
 ---
 
+## Table of Contents — Package Guides
+
+Each application has its own README with setup, shortcuts, and aliases.
+
+| Package | What it is | Its Guide |
+|---------|-----------|-----------|
+| `aerospace` | Tiling window manager (macOS) | [README](aerospace/README.md) |
+| `borders` | Focused-window borders (JankyBorders) | [README](borders/README.md) |
+| `ghostty` | GPU terminal emulator | [README](ghostty/README.md) |
+| `karabiner` | Key remapping (Karabiner-Elements) | [README](karabiner/README.md) |
+| `sketchybar` | Custom macOS menu bar | [README](sketchybar/README.md) |
+| `starship` | Cross-shell prompt | [README](starship/README.md) |
+| `tmux` | Terminal multiplexer | [README](tmux/README.md) |
+| `zsh` | Shell config + aliases | [README](zsh/README.md) |
+
+> The rest of this document explains **how to add a new package** to the dotfiles with GNU Stow.
+
+---
+
 ## 1. Config Inside `~/.config`
 
 **Example:** Aerospace
