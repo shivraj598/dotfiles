@@ -1,6 +1,12 @@
 # --- Font Fixes for Spacing Glitches ---
-font-family = "SF Mono"
+font-family = "JetBrainsMono Nerd Font"
 font-size = 13
+
+# Force Nerd Font icon codepoints to render from JetBrainsMono Nerd Font.
+# Ghostty only auto-uses its embedded icons when the primary font lacks them
+# AND the width hint matches; explicitly mapping the PUA ranges keeps the
+# icons single-width and correctly scaled even when driven through tmux.
+font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
 
 # --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)

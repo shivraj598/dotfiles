@@ -15,9 +15,10 @@ export EDITOR="code --wait"
 autoload -Uz compinit && compinit -i
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-# Load your custom autosuggestions plugin
-source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# zsh-autosuggestions disabled — faded ghost text was distracting.
+# To re-enable, uncomment the two lines below.
+# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+# export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
 
 # 3. HISTORY CONFIGURATION
 
