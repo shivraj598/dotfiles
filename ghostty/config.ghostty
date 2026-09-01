@@ -17,3 +17,14 @@ background-blur = true
 
 # Tells other apps your native terminal type for perfect compatibility
 term = "xterm-ghostty"
+
+# --- Split Pane Dividers ---
+# Red color for split divider lines (Cmd+D splits)
+split-divider-color = #ff0000
+
+# --- Split Pane Navigation ---
+# Move focus between splits with Cmd+Shift+H/J/K/L (vim-style)
+keybind = cmd+shift+h=goto_split:left
+keybind = cmd+shift+j=goto_split:down
+keybind = cmd+shift+k=goto_split:up
+keybind = cmd+shift+l=goto_split:right
