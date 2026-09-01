@@ -17,7 +17,3 @@ background-blur = true
 
 # Tells other apps your native terminal type for perfect compatibility
 term = "xterm-ghostty"
-
-# --- Pane Separator Lines ---
-# Red color for pane dividers (vertical/horizontal separators between panes)
-pane-border-color = 0xff0000
