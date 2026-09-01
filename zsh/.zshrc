@@ -1,6 +1,11 @@
 
 # 1. SYSTEM ENVIRONMENT & HOMEBREW
 
+# Set locale to UTF-8 for proper Unicode/Nerd Font rendering in tmux
+export LC_ALL=en_US.UTF-8
+export LANG=en_US.UTF-8
+export LC_CTYPE=en_US.UTF-8
+
 # Load Homebrew first so system plugins work properly
 eval "$(/opt/homebrew/bin/brew shellenv)"
 
@@ -15,10 +20,20 @@ export EDITOR="code --wait"
 autoload -Uz compinit && compinit -i
 zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
 
-# zsh-autosuggestions disabled — faded ghost text was distracting.
-# To re-enable, uncomment the two lines below.
-# source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
-# export ZSH_AUTOSUGGEST_BUFFER_MAX_SIZE=20
+# zsh-autosuggestions — Real-time command suggestions as you type
+source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
+
+# Strategy: only suggest from history (faster, smarter)
+export ZSH_AUTOSUGGEST_STRATEGY=(history)
+
+# CRITICAL: Only Tab accepts suggestions (prevents typing interference bugs)
+bindkey '^I' autosuggest-accept
+
+# Make suggestions subtle (dark gray, not distracting)
+export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
+
+# Don't clear suggestion when backspacing (better UX)
+export ZSH_AUTOSUGGEST_CLEAR_ON_EDIT=0
 
 # 3. HISTORY CONFIGURATION
 
