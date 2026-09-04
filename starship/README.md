@@ -16,7 +16,7 @@ Requires the Starship binary installed.
 
 ## Prompt Layout (left to right)
 
-```
+```text
 (python) directory on <branch> at 24h:time
 ❯
 ```
