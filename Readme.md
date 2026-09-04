@@ -2,7 +2,7 @@
 
 My dotfiles are managed using GNU Stow.
 
-**Basic workflow:**
+## Basic workflow
 
 1. Find the application's original config
 2. Move the config into `~/dotfiles`
@@ -15,7 +15,7 @@ My dotfiles are managed using GNU Stow.
 Each application has its own README with setup, shortcuts, and aliases.
 
 | Package | What it is | Its Guide |
-|---------|-----------|-----------|
+| --------- | ----------- | ----------- |
 | `aerospace` | Tiling window manager (macOS) | [README](aerospace/README.md) |
 | `borders` | Focused-window borders (JankyBorders) | [README](borders/README.md) |
 | `ghostty` | GPU terminal emulator | [README](ghostty/README.md) |
@@ -31,9 +31,9 @@ Each application has its own README with setup, shortcuts, and aliases.
 
 ## 1. Config Inside `~/.config`
 
-**Example:** Aerospace
+### Example: Aerospace
 
-**Original config:**
+### Original config
 
 ```bash
 ~/.config/aerospace/
@@ -65,9 +65,9 @@ Move the config:
 mv ~/.config/aerospace ~/dotfiles/aerospace/.config/
 ```
 
-**Result:**
+### Result
 
-```
+```text
 ~/dotfiles/aerospace/.config/aerospace/
 ```
 
@@ -78,9 +78,9 @@ cd ~/dotfiles
 stow aerospace
 ```
 
-**Result:**
+### Result01
 
-```bash
+```text
 ~/.config/aerospace
         ↓
      symlink
@@ -113,9 +113,9 @@ mkdir -p ~/dotfiles/claude
 mv ~/.claude ~/dotfiles/claude/
 ```
 
-**Result:**
+### Result02
 
-```bash
+```text
 ~/dotfiles/claude/.claude/
 ```
 
@@ -126,9 +126,9 @@ cd ~/dotfiles
 stow claude
 ```
 
-**Result:**
+### Result03
 
-```bash
+```text
 ~/.claude
     ↓
  symlink
@@ -155,9 +155,9 @@ mkdir -p ~/dotfiles/zsh
 mv ~/.zshrc ~/dotfiles/zsh/
 ```
 
-**Result:**
+### Result04
 
-```bash
+```text
 ~/dotfiles/zsh/.zshrc
 ```
 
@@ -168,9 +168,9 @@ cd ~/dotfiles
 stow zsh
 ```
 
-**Result:**
+### Result05
 
-```bash
+```text
 ~/.zshrc
    ↓
 symlink
@@ -184,7 +184,7 @@ symlink
 
 Some macOS applications store configuration somewhere like:
 
-```
+```text
 ~/Library/Application Support/example/
 ```
 
@@ -198,7 +198,7 @@ find ~/Library -iname "*example*" 2>/dev/null
 
 For a custom location, the package can be kept simple:
 
-```bash
+```text
 ~/dotfiles/example/
 └── config
 ```
@@ -217,7 +217,7 @@ cd ~/dotfiles
 stow --target="/path/to/original/config/directory" example
 ```
 
-**Example:**
+### Example
 
 ```bash
 cd ~/dotfiles
@@ -239,7 +239,7 @@ stow --target="$HOME/Library/Application Support/com.example" example
 
 ## The Only Workflow to Remember
 
-```
+```text
 1. FIND
    Where does the application store its config?
         ↓
@@ -251,4 +251,4 @@ stow --target="$HOME/Library/Application Support/com.example" example
    stow PACKAGE
 ```
 
-**That's it.**
+That's it.
