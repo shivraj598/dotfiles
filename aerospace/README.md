@@ -17,7 +17,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ## Workspaces
 
 | Workspace | Purpose |
-|-----------|---------|
+| ----------- | --------- |
 | `I` | IDE |
 | `B` | Browser |
 | `T` | Terminal |
@@ -30,7 +30,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Window layouts
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + /` | Toggle tiled layout orientation |
 | `Opt + ,` | Toggle accordion layout orientation |
 | `Opt + F` | Fullscreen toggle |
@@ -40,7 +40,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Focus windows
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + H` | Focus left |
 | `Opt + J` | Focus down |
 | `Opt + K` | Focus up |
@@ -49,7 +49,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Move windows
 
 | Shortcut | Action |
-|----------|--------|
+| --------------- | ----------------- |
 | `Opt + Shift + H` | Move window left |
 | `Opt + Shift + J` | Move window down |
 | `Opt + Shift + K` | Move window up |
@@ -58,14 +58,14 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Resize windows
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + -` | Resize window -50 |
 | `Opt + Shift + =` | Resize window +50 |
 
 ### Switch workspaces
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + I` | IDE workspace |
 | `Opt + B` | Browser workspace |
 | `Opt + T` | Terminal workspace |
@@ -74,7 +74,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Move windows to workspaces
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + Shift + I` | Move window to IDE and follow |
 | `Opt + Shift + B` | Move window to Browser and follow |
 | `Opt + Shift + T` | Move window to Terminal and follow |
@@ -83,7 +83,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ### Workspace navigation
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Opt + Tab` | Previous / current workspace |
 | `Opt + Shift + Tab` | Move workspace to next monitor |
 
@@ -92,7 +92,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ## Service Mode (enter with `Opt + Shift + ;`)
 
 | Shortcut | Action |
-|----------|--------|
+| ---------- | -------- |
 | `Esc` | Reload config, return to main |
 | `R` | Flatten workspace tree |
 | `F` | Toggle floating/tiling |
