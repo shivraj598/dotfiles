@@ -25,7 +25,7 @@ A session is a persistent workspace. It survives terminal close and reconnection
 ### From Terminal (outside tmux)
 
 | Command | What it does |
-|---------|--------------|
+| --------- | -------------- |
 | `tmux` | Start server and create default session |
 | `tmux new -s name` | Create session named `name` |
 | `tmux new -s name -c ~/path` | Create session in specific directory |
@@ -38,7 +38,7 @@ A session is a persistent workspace. It survives terminal close and reconnection
 ### Inside tmux
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + s` | Session selector (browse/switch sessions) |
 | `Prefix + $` | Rename current session |
 | `Prefix + d` | Detach (leave session running in background) |
@@ -69,7 +69,7 @@ Windows are tabs inside a session. Each window holds its own set of panes.
 ### Navigation
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + 1` | Jump to window 1 |
 | `Prefix + 2` | Jump to window 2 |
 | `Prefix + 3` | Jump to window 3 |
@@ -83,7 +83,7 @@ Windows are tabs inside a session. Each window holds its own set of panes.
 ### Management
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + c` | Create new window (in current directory) |
 | `Prefix + ,` | Rename current window |
 | `Prefix + X` | Close window (with confirm) |
@@ -120,7 +120,7 @@ Works seamlessly between tmux panes and Neovim splits via `vim-tmux-navigator`.
 ### Splitting & Closing
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + \` | Split horizontally (side by side) |
 | `Prefix + -` | Split vertically (top/bottom) |
 | `Prefix + x` | Close current pane (with confirm) |
@@ -130,7 +130,7 @@ Works seamlessly between tmux panes and Neovim splits via `vim-tmux-navigator`.
 Press `Prefix` once, then keep pressing the key:
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + H` | Resize 5px left |
 | `Prefix + J` | Resize 5px down |
 | `Prefix + K` | Resize 5px up |
@@ -139,7 +139,7 @@ Press `Prefix` once, then keep pressing the key:
 ### Layouts
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + m` | Toggle zoom (maximize pane) |
 | `Prefix + q` | Show pane numbers |
 | `Prefix + =` | Tiled layout |
@@ -152,7 +152,7 @@ Press `Prefix` once, then keep pressing the key:
 ## Copy Mode
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + [` | Enter copy mode |
 | `Escape` | Exit copy mode |
 | `v` | Start selection |
@@ -187,14 +187,14 @@ Active window marked with `●`. Zoomed window shows `󰍉` icon.
 ## Plugins
 
 | Plugin | Purpose |
-|--------|---------|
+| -------- | --------- |
 | [tpm](https://github.com/tmux-plugins/tpm) | Plugin manager |
 | [vim-tmux-navigator](https://github.com/christoomey/vim-tmux-navigator) | Pane/split navigation |
 | [tmux-resurrect](https://github.com/tmux-plugins/tmux-resurrect) | Save/restore sessions |
 | [tmux-continuum](https://github.com/tmux-plugins/tmux-continuum) | Auto-save every 15 min |
 
 | Keybinding | What it does |
-|------------|--------------|
+| ------------ | -------------- |
 | `Prefix + I` | Install plugins |
 | `Prefix + U` | Update plugins |
 | `Prefix + Ctrl+r` | Restore last session |

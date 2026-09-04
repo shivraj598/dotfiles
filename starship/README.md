@@ -22,6 +22,7 @@ Requires the Starship binary installed.
 ```
 
 Order defined by `format`:
+
 1. Python virtualenv (in literal parentheses, cyan)
 2. Current directory
 3. Git branch (white, with GitHub icon ` `)
@@ -34,7 +35,7 @@ Order defined by `format`:
 ## Module Settings
 
 | Module | Customization |
-|--------|---------------|
+| -------- | --------------- |
 | `[git_branch]` | Symbol = GitHub octocat ` ` (`U+F09B`), bold white |
 | `[git_status]` | **Disabled** (removes the `[?]` untracked/modified indicator) |
 | `[python]` | Shows `(virtualenv)` in bold cyan at start |
