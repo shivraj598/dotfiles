@@ -2,7 +2,7 @@
 
 Nord-themed tmux configuration for macOS with AstroNvim and full-stack development.
 
-**Prefix:** `Ctrl + Space` (every tmux shortcut starts with this)
+**Prefix:** `Ctrl + a` (every tmux shortcut starts with this)
 
 ## Setup
 
@@ -168,7 +168,7 @@ Press `Prefix` once, then keep pressing the key:
 | Keybinding | What it does |
 |------------|--------------|
 | `Prefix + r` | Reload tmux config |
-| `Prefix + Ctrl+Space` | Send Ctrl+Space to active pane |
+| `Prefix + Prefix` | Send Ctrl+a to active pane |
 
 ---
 
