@@ -19,7 +19,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 ### File / directory
 
 | Alias | Expands to | What it does |
-|-------|-----------|--------------|
+| ------- | ----------- | -------------- |
 | `cl` | `clear` | Clear the terminal |
 | `ls` | `ls -G` | Colorful directory listing (macOS) |
 | `ll` | `ls -alG` | Complete list including hidden files |
@@ -30,7 +30,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 ### Git
 
 | Alias | Expands to | What it does |
-|-------|-----------|--------------|
+| ------- | ----------- | -------------- |
 | `g` | `git` | Git |
 | `gs` | `git status` | Working tree status |
 | `ga` | `git add` | Stage files |
@@ -41,7 +41,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 ### Navigation
 
 | Alias | Expands to | What it does |
-|-------|-----------|--------------|
+| ------- | ----------- | -------------- |
 | `..` | `cd ..` | Go up one directory |
 | `ho` | `cd ~` | Home directory |
 | `pr` | `cd ~/Projects` | Projects directory |
@@ -54,7 +54,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 ### Agents
 
 | Alias | Expands to | What it does |
-|-------|-----------|--------------|
+| ------- | ----------- | -------------- |
 | `oc` | `opencode` | OpenCode agent |
 | `cc` | `claude` | Claude Code agent |
 
@@ -63,7 +63,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 ## Functions
 
 | Function | What it does |
-|----------|--------------|
+| ---------- | -------------- |
 | `env <name>` | Create a Python virtual environment named `<name>` |
 | `act <env>` | Activate a virtual environment |
 | `dec` | Deactivate the current environment |
