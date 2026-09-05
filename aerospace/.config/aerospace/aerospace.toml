@@ -526,6 +526,61 @@ run = 'move-node-to-workspace S'
 
 
 # ============================================================
+# AI / CHATBOT APPLICATIONS -> A
+# ============================================================
+
+# Claude Desktop
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claudefordesktop'
+run = 'move-node-to-workspace A'
+
+# Claude Desktop (older bundle id)
+[[on-window-detected]]
+if.app-id = 'com.anthropic.claude'
+run = 'move-node-to-workspace A'
+
+# ChatGPT
+[[on-window-detected]]
+if.app-id = 'com.openai.chat'
+run = 'move-node-to-workspace A'
+
+# Microsoft Copilot
+[[on-window-detected]]
+if.app-id = 'com.microsoft.copilot'
+run = 'move-node-to-workspace A'
+
+# Microsoft 365 (Office suite)
+[[on-window-detected]]
+if.app-id = 'com.microsoft.office'
+run = 'move-node-to-workspace A'
+
+# Microsoft Word
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace A'
+
+# Microsoft Excel
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = 'move-node-to-workspace A'
+
+# Microsoft PowerPoint
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Powerpoint'
+run = 'move-node-to-workspace A'
+
+# Microsoft Outlook
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace A'
+
+# Gemini
+[[on-window-detected]]
+if.app-id = 'com.google.gemini'
+run = 'move-node-to-workspace A'
+
+
+# ============================================================
 # FLOATING APPLICATIONS
 # ============================================================
 
@@ -549,6 +604,7 @@ I = 'Built-in Retina Display'
 B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
 S = 'Built-in Retina Display'
+A = 'Built-in Retina Display'
 
 # Prefer the external monitor.
 # Fall back to the MacBook when the external monitor is absent.
