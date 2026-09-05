@@ -21,6 +21,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `I` | IDE |
 | `B` | Browser |
 | `T` | Terminal |
+| `N` | Notes (Apple Notes, Obsidian, Notion) |
 | `S` | Socials (WhatsApp, Telegram, etc.) |
 | `A` | AI / Chatbots (Claude, Copilot, Office 365) |
 | `1`–`5` | Additional workspaces |
@@ -71,6 +72,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `Opt + I` | IDE workspace |
 | `Opt + B` | Browser workspace |
 | `Opt + T` | Terminal workspace |
+| `Opt + N` | Notes workspace |
 | `Opt + S` | Socials workspace |
 | `Opt + A` | AI / Chatbots workspace |
 | `Opt + 1`–`5` | Additional workspaces 1–5 |
@@ -82,6 +84,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `Opt + Shift + I` | Move window to IDE and follow |
 | `Opt + Shift + B` | Move window to Browser and follow |
 | `Opt + Shift + T` | Move window to Terminal and follow |
+| `Opt + Shift + N` | Move window to Notes and follow |
 | `Opt + Shift + S` | Move window to Socials and follow |
 | `Opt + Shift + A` | Move window to AI / Chatbots and follow |
 | `Opt + Shift + 1`–`5` | Move window to workspace 1–5 and follow |

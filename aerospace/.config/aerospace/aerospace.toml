@@ -62,6 +62,7 @@ exec-on-workspace-change = [
 # I = IDE
 # B = Browser
 # T = Terminal
+# N = Notes
 # S = Socials
 # A = AI / Chatbots
 #
@@ -70,6 +71,7 @@ persistent-workspaces = [
     'I',
     'B',
     'T',
+    'N',
     'S',
     'A',
     '1',
@@ -242,6 +244,9 @@ alt-b = 'workspace B'
 # Option + T opens the Terminal workspace.
 alt-t = 'workspace T'
 
+# Option + N opens the Notes workspace.
+alt-n = 'workspace N'
+
 # Option + S opens the Socials workspace.
 alt-s = 'workspace S'
 
@@ -271,6 +276,10 @@ alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
 # Option + Shift + T
 # Move the focused window to the Terminal workspace and follow it.
 alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
+
+# Option + Shift + N
+# Move the focused window to the Notes workspace and follow it.
+alt-shift-n = 'move-node-to-workspace N --focus-follows-window'
 
 # Option + Shift + S
 # Move the focused window to the Socials workspace and follow it.
@@ -581,6 +590,51 @@ run = 'move-node-to-workspace A'
 
 
 # ============================================================
+# NOTE-TAKING APPLICATIONS -> N
+# ============================================================
+
+# Apple Notes
+[[on-window-detected]]
+if.app-id = 'com.apple.Notes'
+run = 'move-node-to-workspace N'
+
+# Obsidian
+[[on-window-detected]]
+if.app-id = 'md.obsidian'
+run = 'move-node-to-workspace N'
+
+# Notion
+[[on-window-detected]]
+if.app-id = 'notion.id'
+run = 'move-node-to-workspace N'
+
+# Notion Calendar
+[[on-window-detected]]
+if.app-id = 'notion.calendar'
+run = 'move-node-to-workspace N'
+
+# Bear
+[[on-window-detected]]
+if.app-id = 'net.shinyfrog.bear'
+run = 'move-node-to-workspace N'
+
+# Notability
+[[on-window-detected]]
+if.app-id = 'com.gingerlabs.Notability'
+run = 'move-node-to-workspace N'
+
+# Evernote
+[[on-window-detected]]
+if.app-id = 'com.evernote.Evernote'
+run = 'move-node-to-workspace N'
+
+# Microsoft OneNote
+[[on-window-detected]]
+if.app-id = 'com.microsoft.onenote.mac'
+run = 'move-node-to-workspace N'
+
+
+# ============================================================
 # FLOATING APPLICATIONS
 # ============================================================
 
@@ -603,6 +657,7 @@ run = 'layout floating'
 I = 'Built-in Retina Display'
 B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
+N = 'Built-in Retina Display'
 S = 'Built-in Retina Display'
 A = 'Built-in Retina Display'
 
