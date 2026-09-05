@@ -62,12 +62,16 @@ exec-on-workspace-change = [
 # I = IDE
 # B = Browser
 # T = Terminal
+# S = Socials
+# A = AI / Chatbots
 #
 # 1-5 = Additional workspaces
 persistent-workspaces = [
     'I',
     'B',
     'T',
+    'S',
+    'A',
     '1',
     '2',
     '3',
@@ -238,6 +242,9 @@ alt-b = 'workspace B'
 # Option + T opens the Terminal workspace.
 alt-t = 'workspace T'
 
+# Option + S opens the Socials workspace.
+alt-s = 'workspace S'
+
 # Option + Number opens an additional workspace.
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -261,6 +268,10 @@ alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
 # Option + Shift + T
 # Move the focused window to the Terminal workspace and follow it.
 alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
+
+# Option + Shift + S
+# Move the focused window to the Socials workspace and follow it.
+alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
 
 # Option + Shift + Number
 # Move the focused window to an additional workspace and follow it.
@@ -463,6 +474,51 @@ run = 'move-node-to-workspace B'
 
 
 # ============================================================
+# SOCIAL APPLICATIONS -> S
+# ============================================================
+
+# WhatsApp
+[[on-window-detected]]
+if.app-id = 'net.whatsapp.WhatsApp'
+run = 'move-node-to-workspace S'
+
+# Telegram
+[[on-window-detected]]
+if.app-id = 'ru.keepcoder.Telegram'
+run = 'move-node-to-workspace S'
+
+# Discord
+[[on-window-detected]]
+if.app-id = 'com.hop.Discord'
+run = 'move-node-to-workspace S'
+
+# Discord PTB
+[[on-window-detected]]
+if.app-id = 'com.discord.Discord'
+run = 'move-node-to-workspace S'
+
+# Slack
+[[on-window-detected]]
+if.app-id = 'com.tinyspeck.slackmacgap'
+run = 'move-node-to-workspace S'
+
+# Signal
+[[on-window-detected]]
+if.app-id = 'org.signal.Signal'
+run = 'move-node-to-workspace S'
+
+# WeChat
+[[on-window-detected]]
+if.app-id = 'com.tencent.xinWeChat'
+run = 'move-node-to-workspace S'
+
+# FaceTime
+[[on-window-detected]]
+if.app-id = 'com.apple.facetime'
+run = 'move-node-to-workspace S'
+
+
+# ============================================================
 # FLOATING APPLICATIONS
 # ============================================================
 
@@ -485,6 +541,7 @@ run = 'layout floating'
 I = 'Built-in Retina Display'
 B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
+S = 'Built-in Retina Display'
 
 # Prefer the external monitor.
 # Fall back to the MacBook when the external monitor is absent.
