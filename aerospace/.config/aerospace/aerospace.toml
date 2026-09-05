@@ -245,6 +245,9 @@ alt-t = 'workspace T'
 # Option + S opens the Socials workspace.
 alt-s = 'workspace S'
 
+# Option + A opens the AI / Chatbots workspace.
+alt-a = 'workspace A'
+
 # Option + Number opens an additional workspace.
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
@@ -272,6 +275,10 @@ alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
 # Option + Shift + S
 # Move the focused window to the Socials workspace and follow it.
 alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
+
+# Option + Shift + A
+# Move the focused window to the AI / Chatbots workspace and follow it.
+alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
 
 # Option + Shift + Number
 # Move the focused window to an additional workspace and follow it.
