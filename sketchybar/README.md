@@ -30,7 +30,7 @@ sketchybar --reload
 ### Left
 
 - **Apple logo** (apple.lua) — click opens the app menu
-- **Spaces** (spaces.lua) — `I B T 1 2 3 4 5` — mirrors AeroSpace workspaces; click to switch, shows the focused app icon per space
+- **Spaces** (spaces.lua) — `I B T S A 1 2 3 4 5` — mirrors AeroSpace workspaces; click to switch, shows the focused app icon per space
 
 ### Center
 
