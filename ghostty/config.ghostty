@@ -15,6 +15,12 @@ background-opacity = 0.20
 # Adds a beautiful native macOS frosted glass blur behind the text
 background-blur = true
 
+# --- Background Image ---
+background-image = ~/dotfiles/public/ghosttybg1.png
+background-image-fit = cover
+background-image-position = center
+background-image-opacity = 0.6
+
 # Tells other apps your native terminal type for perfect compatibility
 term = "xterm-ghostty"
 
