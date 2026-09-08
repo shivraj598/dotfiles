@@ -14,8 +14,7 @@
     "lazyvim.plugins.extras.lang.typescript",
     "lazyvim.plugins.extras.lang.typescript.oxc",
     "lazyvim.plugins.extras.lang.typescript.vtsls",
-    "lazyvim.plugins.extras.lang.yaml",
-    "lazyvim.plugins.extras.ui.alpha"
+    "lazyvim.plugins.extras.lang.yaml"
   ],
   "install_version": 8,
   "news": {
