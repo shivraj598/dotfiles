@@ -18,10 +18,10 @@ macos-titlebar-style = hidden
 background-blur = true
 
 # --- Background Image ---
-background-image = ~/dotfiles/public/girl2.png
+background-image = ~/dotfiles/public/skull3.png
 background-image-fit = cover
 background-image-position = center
-background-image-opacity = 0.70
+background-image-opacity = 1
 
 # Tells other apps your native terminal type for perfect compatibility
 term = "xterm-ghostty"
