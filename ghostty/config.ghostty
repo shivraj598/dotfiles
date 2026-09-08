@@ -10,7 +10,8 @@ font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
 
 # --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
-background-opacity = 0.20
+background-opacity = 1
+
 
 # Adds a beautiful native macOS frosted glass blur behind the text
 background-blur = true
