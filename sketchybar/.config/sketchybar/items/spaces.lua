@@ -3,7 +3,7 @@ local icons = require("icons")
 local settings = require("settings")
 local app_icons = require("helpers.app_icons")
 
-local workspace_names = { "I", "B", "T", "N", "S", "A", "1", "2", "3", "4", "5" }
+local workspace_names = { "I", "B", "T", "N", "S", "A", "1", "2" }
 local laptop_display = 1
 local workspace_items = {}
 local workspace_brackets = {}
@@ -130,7 +130,8 @@ local function update_display_assignment()
     end
 
     for _, workspace_name in ipairs(workspace_names) do
-      local display = external_display ~= nil and workspace_name ~= "I" and workspace_name ~= "B" and workspace_name ~= "T" and workspace_name ~= "N" and workspace_name ~= "S" and workspace_name ~= "A"
+      local is_laptop_workspace = workspace_name == "I" or workspace_name == "T" or workspace_name == "N" or workspace_name == "S" or workspace_name == "A"
+      local display = external_display ~= nil and not is_laptop_workspace
         and external_display or laptop_display
       workspace_items[workspace_name]:set({ display = display })
       workspace_brackets[workspace_name]:set({ display = display })
