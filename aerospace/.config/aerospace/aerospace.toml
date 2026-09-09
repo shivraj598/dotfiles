@@ -66,7 +66,7 @@ exec-on-workspace-change = [
 # S = Socials
 # A = AI / Chatbots
 #
-# 1-5 = Additional workspaces
+# 1-2 = Additional workspaces
 persistent-workspaces = [
     'I',
     'B',
@@ -75,10 +75,7 @@ persistent-workspaces = [
     'S',
     'A',
     '1',
-    '2',
-    '3',
-    '4',
-    '5'
+    '2'
 ]
 
 
@@ -256,9 +253,6 @@ alt-a = 'workspace A'
 # Option + Number opens an additional workspace.
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
-alt-3 = 'workspace 3'
-alt-4 = 'workspace 4'
-alt-5 = 'workspace 5'
 
 
 # ============================================================
@@ -293,9 +287,6 @@ alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
 # Move the focused window to an additional workspace and follow it.
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
-alt-shift-3 = 'move-node-to-workspace 3 --focus-follows-window'
-alt-shift-4 = 'move-node-to-workspace 4 --focus-follows-window'
-alt-shift-5 = 'move-node-to-workspace 5 --focus-follows-window'
 
 
 # ============================================================
@@ -635,6 +626,16 @@ run = 'move-node-to-workspace N'
 
 
 # ============================================================
+# FINDER -> 1
+# ============================================================
+
+# Finder always opens in workspace 1.
+[[on-window-detected]]
+if.app-id = 'com.apple.finder'
+run = 'move-node-to-workspace 1'
+
+
+# ============================================================
 # FLOATING APPLICATIONS
 # ============================================================
 
@@ -655,7 +656,6 @@ run = 'layout floating'
 
 # Always use the MacBook display.
 I = 'Built-in Retina Display'
-B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
 N = 'Built-in Retina Display'
 S = 'Built-in Retina Display'
@@ -663,8 +663,6 @@ A = 'Built-in Retina Display'
 
 # Prefer the external monitor.
 # Fall back to the MacBook when the external monitor is absent.
+B = ['secondary', 'Built-in Retina Display']
 1 = ['secondary', 'Built-in Retina Display']
 2 = ['secondary', 'Built-in Retina Display']
-3 = ['secondary', 'Built-in Retina Display']
-4 = ['secondary', 'Built-in Retina Display']
-5 = ['secondary', 'Built-in Retina Display']
