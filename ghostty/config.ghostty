@@ -10,7 +10,7 @@ font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
 
 # --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
-background-opacity = 1
+background-opacity = 0.60
 macos-titlebar-style = hidden
 
 
@@ -18,10 +18,11 @@ macos-titlebar-style = hidden
 background-blur = true
 
 # --- Background Image ---
-background-image = ~/dotfiles/public/skull3.png
-background-image-fit = cover
-background-image-position = center
-background-image-opacity = 1
+# background-image = ~/dotfiles/public/skull3.png
+# background-image-fit = cover
+# background-image-position = center
+# background-image-opacity = 0.10
+
 
 # Tells other apps your native terminal type for perfect compatibility
 term = "xterm-ghostty"
