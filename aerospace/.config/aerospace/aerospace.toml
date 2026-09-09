@@ -33,10 +33,10 @@ auto-reload-config = true
 # Commands executed after logging into the macOS user session.
 after-login-command = []
 
-# Start JankyBorders after AeroSpace starts.
-after-startup-command = [
-    'exec-and-forget borders active_color=0xFF91FFFF inactive_color=0xff494d64 width=2.0 corner_radius=0'
-]
+# NOTE: JankyBorders is NOT launched here anymore.
+# It is configured and managed by ~/.config/borders/bordersrc
+# (started via the 'borders' Homebrew service). See: dotfiles/borders/.
+after-startup-command = []
 
 
 # ============================================================
@@ -149,13 +149,13 @@ inner.horizontal = 10
 inner.vertical = 10
 
 # Space between windows and the monitor edges.
-outer.left = 8
-outer.bottom = 8
-outer.right = 8
+outer.left = 10
+outer.bottom = 10
+outer.right = 10
 
 # Keep the original conditional top gap.
 outer.top = [
-    { monitor."Built-in Retina Display" = 10 },
+    { monitor."Built-in Retina Display" = 15 },
     40
 ]
 
