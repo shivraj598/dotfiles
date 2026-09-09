@@ -100,3 +100,7 @@ export PATH="/opt/homebrew/bin:$PATH"
 #agent harness
 alias oc='opencode'
 alias cc='claude'
+
+
+#zoxide
+eval "$(zoxide init zsh)"
