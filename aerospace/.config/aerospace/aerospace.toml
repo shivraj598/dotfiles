@@ -145,13 +145,13 @@ preset = 'qwerty'
 [gaps]
 
 # Space between tiled windows.
-inner.horizontal = 10
-inner.vertical = 10
+inner.horizontal = 12
+inner.vertical = 12
 
 # Space between windows and the monitor edges.
-outer.left = 10
+outer.left = 14
 outer.bottom = 10
-outer.right = 10
+outer.right = 14
 
 # Keep the original conditional top gap.
 outer.top = [
