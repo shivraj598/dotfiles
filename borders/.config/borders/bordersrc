@@ -2,18 +2,17 @@
 
 # ============================================================
 # JANKYBORDERS CONFIGURATION
-# File: ~/.config/borders/bordersrc
-#file: dotfiles/borders/bordersrc
+# This is the ONLY place border settings live.
+# After editing, reload with:
+#   brew services restart borders
+#
+# JankyBorders color format: 0xAARRGGBB  (AA=alpha, RRGGBB=color)
 # ============================================================
 
 # Cyan: #91FFFF
-# JankyBorders color format: 0xAARRGGBB
-# FF = fully opaque
-# 91FFFF = cyan
-
 options=(
     style=round
-    width=2.0
+    width=4.0
     hidpi=on
     active_color=0xFF91FFFF
     inactive_color=0x00313A31
