@@ -6,16 +6,16 @@
 #file: dotfiles/borders/bordersrc
 # ============================================================
 
-# Light green: #90EE90
+# Cyan: #91FFFF
 # JankyBorders color format: 0xAARRGGBB
 # FF = fully opaque
-# 90EE90 = light green
+# 91FFFF = cyan
 
 options=(
     style=round
     width=2.0
     hidpi=on
-    active_color=0xffffffff
+    active_color=0xFF91FFFF
     inactive_color=0x00313A31
     background_color=0x00000000
 )
