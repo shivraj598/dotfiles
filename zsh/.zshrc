@@ -104,3 +104,4 @@ alias cc='claude'
 
 #zoxide
 eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"
