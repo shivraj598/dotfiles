@@ -1,4 +1,4 @@
-# Dotfiles + GNU Stow
+# Dotfiles + GNU Stow and full Dot files setup Guide
 
 My dotfiles are managed using GNU Stow.
 
