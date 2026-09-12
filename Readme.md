@@ -8,6 +8,7 @@ My dotfiles are managed using GNU Stow.
 2. Move the config into `~/dotfiles`
 3. Stow the package to create the symlink
 4. Use stow for the symlink
+5. with ./config/nvim , ./config/tmux. etc or direct it symlink with default config folder. 
 
 
 ---
