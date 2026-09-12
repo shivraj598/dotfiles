@@ -7,6 +7,8 @@ My dotfiles are managed using GNU Stow.
 1. Find the application's original config
 2. Move the config into `~/dotfiles`
 3. Stow the package to create the symlink
+4. Use stow for the symlink
+
 
 ---
 
