@@ -1,4 +1,4 @@
-# tmux
+# tmux setup guide and its implementation
 
 Nord-themed tmux configuration for macOS with AstroNvim and full-stack development.
 
