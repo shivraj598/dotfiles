@@ -989,7 +989,7 @@ binding = "Option+Grave"
 id = "toggleQuakeTerminal"
 
 [[hotkeys]]
-binding = "Option+Shift+L"
+binding = "Unassigned"
 id = "toggleWorkspaceLayout"
 
 [[hotkeys]]
@@ -1001,7 +1001,7 @@ binding = "Unassigned"
 id = "toggleSystemStats"
 
 [[workspaces]]
-displayName = "B"
+displayName = "I"
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
 layoutType = "dwindle"
 name = "1"
@@ -1010,33 +1010,64 @@ name = "1"
 type = "main"
 
 [[workspaces]]
+displayName = "B"
 id = "454CECD4-5E9D-4ED1-95D7-979D48817F5F"
 layoutType = "dwindle"
 name = "2"
 
 [workspaces.monitorAssignment]
-type = "main"
+type = "secondary"
 
 [[workspaces]]
+displayName = "T"
 id = "BEB842B5-E894-4791-9FD1-397C3CDD3538"
-layoutType = "niri"
+layoutType = "dwindle"
 name = "3"
 
 [workspaces.monitorAssignment]
 type = "main"
 
 [[workspaces]]
+displayName = "N"
 id = "248AA883-2261-4D45-943C-79C0E46A232B"
-layoutType = "niri"
+layoutType = "dwindle"
 name = "4"
 
 [workspaces.monitorAssignment]
 type = "main"
 
 [[workspaces]]
+displayName = "S"
 id = "8B8C45D6-CE9E-41D9-BD50-BE4989D5E3DE"
-layoutType = "niri"
+layoutType = "dwindle"
 name = "5"
 
 [workspaces.monitorAssignment]
 type = "main"
+
+[[workspaces]]
+displayName = "A"
+id = "AA1B0964-F5F9-446F-8FB3-DAD273D3DF8C"
+layoutType = "dwindle"
+name = "6"
+
+[workspaces.monitorAssignment]
+type = "main"
+
+[[workspaces]]
+displayName = "1"
+id = "D47E6574-9B86-4480-9FEE-4E41C60A2EE2"
+layoutType = "dwindle"
+name = "7"
+
+[workspaces.monitorAssignment]
+type = "secondary"
+
+[[workspaces]]
+displayName = "2"
+id = "A806159D-3BB8-416E-81CC-964865793346"
+layoutType = "dwindle"
+name = "8"
+
+[workspaces.monitorAssignment]
+type = "secondary"
