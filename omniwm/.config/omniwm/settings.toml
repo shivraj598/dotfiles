@@ -1003,7 +1003,7 @@ id = "toggleSystemStats"
 [[workspaces]]
 displayName = "B"
 id = "AD36F001-C57E-41A5-AC1D-DF5249D007F0"
-layoutType = "niri"
+layoutType = "dwindle"
 name = "1"
 
 [workspaces.monitorAssignment]
