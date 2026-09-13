@@ -329,75 +329,75 @@ binding = "Unassigned"
 id = "assignFocusedWindowToScratchpad.10"
 
 [[hotkeys]]
-binding = "Option+1"
+binding = "Option+I"
 id = "switchWorkspace.0"
 
 [[hotkeys]]
-binding = "Option+Shift+1"
+binding = "Option+Shift+I"
 id = "moveToWorkspace.0"
 
 [[hotkeys]]
-binding = "Option+2"
+binding = "Option+B"
 id = "switchWorkspace.1"
 
 [[hotkeys]]
-binding = "Option+Shift+2"
+binding = "Option+Shift+B"
 id = "moveToWorkspace.1"
 
 [[hotkeys]]
-binding = "Option+3"
+binding = "Option+T"
 id = "switchWorkspace.2"
 
 [[hotkeys]]
-binding = "Option+Shift+3"
+binding = "Option+Shift+T"
 id = "moveToWorkspace.2"
 
 [[hotkeys]]
-binding = "Option+4"
+binding = "Option+N"
 id = "switchWorkspace.3"
 
 [[hotkeys]]
-binding = "Option+Shift+4"
+binding = "Option+Shift+N"
 id = "moveToWorkspace.3"
 
 [[hotkeys]]
-binding = "Option+5"
+binding = "Option+S"
 id = "switchWorkspace.4"
 
 [[hotkeys]]
-binding = "Option+Shift+5"
+binding = "Option+Shift+S"
 id = "moveToWorkspace.4"
 
 [[hotkeys]]
-binding = "Option+6"
+binding = "Option+A"
 id = "switchWorkspace.5"
 
 [[hotkeys]]
-binding = "Option+Shift+6"
+binding = "Option+Shift+A"
 id = "moveToWorkspace.5"
 
 [[hotkeys]]
-binding = "Option+7"
+binding = "Option+1"
 id = "switchWorkspace.6"
 
 [[hotkeys]]
-binding = "Option+Shift+7"
+binding = "Option+Shift+1"
 id = "moveToWorkspace.6"
 
 [[hotkeys]]
-binding = "Option+8"
+binding = "Option+2"
 id = "switchWorkspace.7"
 
 [[hotkeys]]
-binding = "Option+Shift+8"
+binding = "Option+Shift+2"
 id = "moveToWorkspace.7"
 
 [[hotkeys]]
-binding = "Option+9"
+binding = "Unassigned"
 id = "switchWorkspace.8"
 
 [[hotkeys]]
-binding = "Option+Shift+9"
+binding = "Unassigned"
 id = "moveToWorkspace.8"
 
 [[hotkeys]]
@@ -473,7 +473,7 @@ binding = "Unassigned"
 id = "moveToWorkspaceSlot.9"
 
 [[hotkeys]]
-binding = "Control+Option+Tab"
+binding = "Option+Tab"
 id = "workspaceBackAndForth"
 
 [[hotkeys]]
@@ -501,7 +501,7 @@ binding = "Option+L"
 id = "focus.right"
 
 [[hotkeys]]
-binding = "Option+Tab"
+binding = "Unassigned"
 id = "focusPrevious"
 
 [[hotkeys]]
@@ -597,19 +597,19 @@ binding = "Unassigned"
 id = "moveColumnToWorkspace.8"
 
 [[hotkeys]]
-binding = "Option+Shift+Left Arrow"
+binding = "Option+Shift+H"
 id = "move.left"
 
 [[hotkeys]]
-binding = "Option+Shift+Down Arrow"
+binding = "Option+Shift+J"
 id = "move.down"
 
 [[hotkeys]]
-binding = "Option+Shift+Up Arrow"
+binding = "Option+Shift+K"
 id = "move.up"
 
 [[hotkeys]]
-binding = "Option+Shift+Right Arrow"
+binding = "Option+Shift+L"
 id = "move.right"
 
 [[hotkeys]]
@@ -681,7 +681,7 @@ binding = "Unassigned"
 id = "moveWindowToMonitor.down"
 
 [[hotkeys]]
-binding = "Option+Return"
+binding = "Option+F"
 id = "toggleFullscreen"
 
 [[hotkeys]]
@@ -713,7 +713,7 @@ binding = "Control+Option+End"
 id = "moveColumnToLast"
 
 [[hotkeys]]
-binding = "Option+T"
+binding = "Unassigned"
 id = "toggleColumnTabbed"
 
 [[hotkeys]]
@@ -893,7 +893,7 @@ binding = "Option+Shift+Equal"
 id = "setWindowSecondarySpan.increase10Percent"
 
 [[hotkeys]]
-binding = "Option+Shift+B"
+binding = "Option+Equal"
 id = "balanceSizes"
 
 [[hotkeys]]
@@ -925,11 +925,11 @@ binding = "Unassigned"
 id = "resizeShrink.vertical"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+Equal"
 id = "resizeFocusedWindow.grow"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Minus"
 id = "resizeFocusedWindow.shrink"
 
 [[hotkeys]]
@@ -965,7 +965,7 @@ binding = "Unassigned"
 id = "rescueOffscreenWindows"
 
 [[hotkeys]]
-binding = "Unassigned"
+binding = "Option+Shift+Space"
 id = "toggleFocusedWindowFloating"
 
 [[hotkeys]]
