@@ -629,10 +629,10 @@ run = 'move-node-to-workspace N'
 # FINDER -> 1
 # ============================================================
 
-# Finder always opens in workspace 1 and switches focus there.
+# Finder always opens as a floating window in the current workspace.
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
-run = 'move-node-to-workspace 1 --focus-follows-window'
+run = 'layout floating'
 
 
 # ============================================================
@@ -642,6 +642,24 @@ run = 'move-node-to-workspace 1 --focus-follows-window'
 # Shottr should open as a floating window.
 [[on-window-detected]]
 if.app-id = 'cc.ffitch.shottr'
+run = 'layout floating'
+
+# System Settings and legacy System Preferences should open as floating.
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.SystemPreferences'
+run = 'layout floating'
+
+# Control Center and Notification Center windows should stay floating.
+[[on-window-detected]]
+if.app-id = 'com.apple.controlcenter'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.apple.notificationcenterui'
 run = 'layout floating'
 
 
