@@ -1,4 +1,5 @@
 ^\.gitignore$
 ^README.*$
+^README\.md$
 ^\.git$
 ^\.DS_Store$
