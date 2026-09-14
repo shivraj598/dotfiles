@@ -26,6 +26,7 @@ Each application has its own README with setup, shortcuts, and aliases.
 | `sketchybar` | Custom macOS menu bar | [README](sketchybar/README.md) |
 | `starship` | Cross-shell prompt | [README](starship/README.md) |
 | `tmux` | Terminal multiplexer | [README](tmux/README.md) |
+| `vscode` | VS Code user settings | — |
 | `zsh` | Shell config + aliases | [README](zsh/README.md) |
 
 > The rest of this document explains **how to add a new package** to the dotfiles with GNU Stow.
