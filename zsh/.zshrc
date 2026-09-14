@@ -1,15 +1,14 @@
 
 # 1. SYSTEM ENVIRONMENT & HOMEBREW
 
+# Remove duplicate PATH entries
+typeset -U path PATH
+
 # Set locale to UTF-8 for proper Unicode/Nerd Font rendering in tmux
 export LC_ALL=en_US.UTF-8
 export LANG=en_US.UTF-8
 export LC_CTYPE=en_US.UTF-8
 
-# Load Homebrew first so system plugins work properly
-eval "$(/opt/homebrew/bin/brew shellenv)"
-
-# Only keeping Antigravity IDE path (Hermes and MiniMax removed)
 export PATH="/Users/shivrajtimilsena/.antigravity-ide/antigravity-ide/bin:$PATH"
 export EDITOR="code --wait"
 
@@ -89,11 +88,8 @@ if command -v starship &> /dev/null; then
     eval "$(starship init zsh)"
 fi
 
-export PATH="$HOME/.local/bin:$PATH"
 
 export VIRTUAL_ENV_DISABLE_PROMPT=1
-
-export PATH="/opt/homebrew/bin:$PATH"
 
 
 
@@ -103,5 +99,4 @@ alias cc='claude'
 
 
 #zoxide
-eval "$(zoxide init zsh)"
 eval "$(zoxide init zsh)"
