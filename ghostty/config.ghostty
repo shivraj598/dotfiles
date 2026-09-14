@@ -1,4 +1,4 @@
-# --- Font Fixes for Spacing Glitches ---
+	# --- Font Fixes for Spacing Glitches ---
 font-family = "JetBrainsMono Nerd Font"
 font-size = 13
 
@@ -10,7 +10,7 @@ font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
 
 # --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
-background-opacity = 0.60
+background-opacity = 0.50
 macos-titlebar-style = hidden
 
 
