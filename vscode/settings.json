@@ -21,6 +21,7 @@
     "git.suggestSmartCommit": false,
     "editor.formatOnSave": true,
     "editor.defaultFormatter": "charliermarsh.ruff",
+    "markdownlint.appliesTo": "noFiles",
     "workbench.notifications.position": "top-right",
     "explorer.confirmDragAndDrop": false,
     "workbench.settings.applyToAllProfiles": [
