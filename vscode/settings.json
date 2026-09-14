@@ -1,0 +1,115 @@
+{
+    "workbench.iconTheme": "material-icon-theme",
+    "explorer.confirmDelete": false,
+    "redhat.telemetry.enabled": false,
+    "[yaml]": {
+        "editor.insertSpaces": true,
+        "editor.tabSize": 2,
+        "editor.autoIndent": "keep",
+        "diffEditor.ignoreTrimWhitespace": false,
+        "editor.defaultColorDecorators": "never",
+        "editor.quickSuggestions": {
+            "strings": true,
+            "other": true,
+            "comments": false
+        }
+    },
+    "terminal.integrated.fontFamily": "JetBrainsMono Nerd Font",
+    "python.terminal.executeInFileDir": true,
+    "jupyter.interactiveWindow.textEditor.executeSelection": true,
+    "python.createEnvironment.trigger": "off",
+    "git.suggestSmartCommit": false,
+    "editor.formatOnSave": true,
+    "editor.defaultFormatter": "charliermarsh.ruff",
+    "workbench.notifications.position": "top-right",
+    "explorer.confirmDragAndDrop": false,
+    "workbench.settings.applyToAllProfiles": [
+        "dictation.enabled"
+    ],
+    "gitConfigUser.profiles": [
+        {
+            "label": "shivraj598",
+            "email": "timilsenashivraj598@gmail.com",
+            "userName": "shivraj598",
+            "id": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+            "signingKey": ""
+        },
+        {
+            "label": "tbc",
+            "email": "tshivraj23@tbc.edu.np",
+            "userName": "shivrajtimilsena",
+            "id": "f53bacb4-da0b-486d-89f9-08e598083d54",
+            "signingKey": ""
+        }
+    ],
+    "gitConfigUser.workspaceProfileSelections": {
+        "/Users/shivrajtimilsena/designsProjects/visitktm": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/projects/Portfolio-v2-shivraj": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/projects/loginsetupfastAPI": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/projects/ytslice": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/dotfiles": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/college/testing": "f53bacb4-da0b-486d-89f9-08e598083d54",
+        "/Users/shivrajtimilsena/coding/docker-databases": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/Learning/AIudaan/AI_Udaan_course_learning": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/projects/meroUI": "487e0e1d-a973-4ccc-8d85-406e874d28ff"
+    },
+    "python.analysis.typeCheckingMode": "strict",
+    "yaml.disableSchemaDetection": [
+        "**/.github/workflows/*.yml",
+        "**/.github/workflows/*.yaml",
+        "**/.gitea/workflows/*.yml",
+        "**/.gitea/workflows/*.yaml",
+        "**/.forgejo/workflows/*.yml",
+        "**/.forgejo/workflows/*.yaml"
+    ],
+    "extensions.ignoreRecommendations": true,
+    "chat.viewSessions.orientation": "stacked",
+    "chat.agent.sandbox.enabled": "on",
+    "files.autoSave": "afterDelay",
+    "[dockercompose]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "gitlens.graph.details.location": "auto",
+    "gitlens.gitCommands.skipConfirmations": [
+        "fetch:command",
+        "stash-push:command",
+        "switch:command"
+    ],
+    "gitlens.graph.layout": "editor",
+    "git.ignoreRebaseWarning": true,
+    "git.confirmSync": false,
+    "gitlens.views.scm.grouped.views": {
+        "commits": true,
+        "branches": true,
+        "remotes": true,
+        "stashes": true,
+        "tags": true,
+        "worktrees": true,
+        "contributors": true,
+        "fileHistory": true,
+        "repositories": true,
+        "searchAndCompare": false,
+        "launchpad": false
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "animations.Install-Method": "Apc Customize UI++",
+    "makefile.configureOnOpen": false,
+    "editor.lineNumbers": "relative",
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "workbench.colorTheme": "Tokyo Night",
+    "accessibility.dimUnfocused.opacity": 0.5,
+    "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
+    "python-envs.defaultEnvManager": "ms-python.python:system",
+    "editor.minimap.enabled": false,
+    "workbench.colorCustomizations": {
+        "contrastBorder": "#00000000",
+        "sideBar.border": "#00000000",
+        "panel.border": "#00000000",
+        "editorGroup.border": "#00000000",
+        "activityBar.border": "#00000000"
+    }
+}
