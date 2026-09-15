@@ -9,7 +9,7 @@
 # JankyBorders color format: 0xAARRGGBB  (AA=alpha, RRGGBB=color)
 # ============================================================
 
-# Cyan: #91FFFF
+# Active color: cyan (#91FFFF)
 options=(
     style=round
     width=4.0
