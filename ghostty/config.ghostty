@@ -10,7 +10,7 @@ font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
 
 # --- Your Window Transparency Styles ---
 # Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
-background-opacity = 0.50
+background-opacity = 1
 macos-titlebar-style = hidden
 
 
@@ -27,10 +27,10 @@ window-padding-y = 0
 window-padding-balance = true
 
 # --- Background Image ---
-# background-image = ~/dotfiles/public/skull3.png
-# background-image-fit = cover
-# background-image-position = center
-# background-image-opacity = 0.10
+background-image = ~/dotfiles/public/girl1.jpg
+background-image-fit = cover
+background-image-position = center
+background-image-opacity = 1
 
 
 # Tells other apps your native terminal type for perfect compatibility
