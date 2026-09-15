@@ -1,2 +1,252 @@
 // Place your key bindings in this file to override the defaults
-[]
+[
+    // File search and navigation
+    {
+        "key": "space f f",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.quickOpen"
+            ]
+        }
+    },
+    {
+        "key": "space f g",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.findInFiles"
+            ]
+        }
+    },
+    {
+        "key": "space f r",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.openRecent"
+            ]
+        }
+    },
+    {
+        "key": "space f b",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.showAllEditorsByQuickOpen"
+            ]
+        }
+    },
+    // File tree
+    {
+        "key": "space e",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.view.explorer"
+            ]
+        }
+    },
+    // Save, buffers, and windows
+    {
+        "key": "space w",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.files.save"
+            ]
+        }
+    },
+    {
+        "key": "space b d",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.closeActiveEditor"
+            ]
+        }
+    },
+    {
+        "key": "space q q",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.closeWindow"
+            ]
+        }
+    },
+    // Code actions and formatting
+    {
+        "key": "space c a",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.quickFix"
+            ]
+        }
+    },
+    {
+        "key": "space c r",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.rename"
+            ]
+        }
+    },
+    {
+        "key": "space c f",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.formatDocument"
+            ]
+        }
+    },
+    // Redo alias; line yank, visual yank, paste, and undo use native Vim motions
+    {
+        "key": "space r",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "after": [
+                "<C-r>"
+            ]
+        }
+    },
+    // Problems and source control
+    {
+        "key": "space x x",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.actions.view.problems"
+            ]
+        }
+    },
+    {
+        "key": "space g g",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.view.scm"
+            ]
+        }
+    },
+    // LSP navigation and hover
+    {
+        "key": "g d",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.revealDefinition"
+            ]
+        }
+    },
+    {
+        "key": "g r",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.goToReferences"
+            ]
+        }
+    },
+    {
+        "key": "g i",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.goToImplementation"
+            ]
+        }
+    },
+    {
+        "key": "shift+k",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.showHover"
+            ]
+        }
+    },
+    // Diagnostics
+    {
+        "key": "] d",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.marker.nextInFiles"
+            ]
+        }
+    },
+    {
+        "key": "[ d",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "editor.action.marker.prevInFiles"
+            ]
+        }
+    },
+    // Vim motions: navigate editor groups
+    {
+        "key": "ctrl+h",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.navigateLeft"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+j",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.navigateDown"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+k",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.navigateUp"
+            ]
+        }
+    },
+    {
+        "key": "ctrl+l",
+        "command": "vim.remap",
+        "when": "editorTextFocus && vim.mode == 'Normal'",
+        "args": {
+            "commands": [
+                "workbench.action.navigateRight"
+            ]
+        }
+    }
+]
