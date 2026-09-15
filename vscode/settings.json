@@ -64,7 +64,6 @@
         "**/.forgejo/workflows/*.yaml"
     ],
     "extensions.ignoreRecommendations": true,
-    "chat.viewSessions.orientation": "stacked",
     "chat.agent.sandbox.enabled": "on",
     "files.autoSave": "afterDelay",
     "[dockercompose]": {
@@ -132,5 +131,6 @@
         "panel.border": "#00000000",
         "editorGroup.border": "#00000000",
         "activityBar.border": "#00000000"
-    }
+    },
+    "chat.viewSessions.orientation": "stacked"
 }
