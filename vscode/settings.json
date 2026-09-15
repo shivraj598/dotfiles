@@ -79,6 +79,26 @@
     "gitlens.graph.layout": "editor",
     "git.ignoreRebaseWarning": true,
     "git.confirmSync": false,
+    "vim.leader": "<space>",
+    "vim.useSystemClipboard": true,
+    "vim.useCtrlKeys": true,
+    "vim.hlsearch": true,
+    "vim.incsearch": true,
+    "vim.ignorecase": true,
+    "vim.smartcase": true,
+    "vim.foldfix": true,
+    "vim.highlightedyank.enable": true,
+    "vim.insertModeKeyBindingsNonRecursive": [
+        {
+            "before": [
+                "j",
+                "k"
+            ],
+            "after": [
+                "<Esc>"
+            ]
+        }
+    ],
     "gitlens.views.scm.grouped.views": {
         "commits": true,
         "branches": true,
