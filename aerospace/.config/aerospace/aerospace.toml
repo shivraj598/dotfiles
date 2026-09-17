@@ -155,7 +155,7 @@ outer.right = 14
 
 # Keep the original conditional top gap.
 outer.top = [
-    { monitor."Built-in Retina Display" = 15 },
+    { monitor."Built-in Retina Display" = 12 },
     45
 ]
 
