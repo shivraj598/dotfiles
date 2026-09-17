@@ -30,7 +30,7 @@ window-padding-balance = true
 background-image = ~/dotfiles/public/girl1.jpg
 background-image-fit = cover
 background-image-position = center
-background-image-opacity = 1
+background-image-opacity = 1 
 
 
 # Tells other apps your native terminal type for perfect compatibility
