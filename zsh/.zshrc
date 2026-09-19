@@ -46,7 +46,7 @@ setopt INC_APPEND_HISTORY  # Save instantly
 
 # 4. LIGHTWEIGHT ALIASES
 
-alias cl="clear"
+alias cl='clear; printf "\033[3J"; tmux clear-history 2>/dev/null; printf "\033[H\033[2J\033[3J"'
 alias ls="ls -G"          # Colorful directory listings on macOS
 alias ll="ls -alG"        # Complete list including hidden files
 alias rmf="rm -rf"        # Force remove any file or folder (empty or non-empty)
