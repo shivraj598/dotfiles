@@ -1,48 +1,76 @@
-	# --- Font Fixes for Spacing Glitches ---
-font-family = "JetBrainsMono Nerd Font"
+# ==============================================================================
+# Ghostty Configuration — Rose Pine
+# Based on the pasted config. Keybindings from the pasted config are NOT applied
+# (kept the current cmd+shift+goto_split binds below).
+#
+# Theme note: pasted `config-file = themes/rosepine` does not resolve
+# (looked in ~/Library/Application Support/com.mitchellh.ghostty/themes/
+#  -> FileNotFound). Fixed to `.config/themes/rosepine`, which resolves to
+#  ~/dotfiles/ghostty/.config/themes/rosepine via the existing symlink.
+# ==============================================================================
+
+config-file = .config/themes/rosepine
+background-opacity = 0.88
+background-blur-radius = 25
+
+font-family = JetBrainsMonoNL Nerd Font
 font-size = 13
+font-feature = -liga,-calt,-dlig
 
-# Force Nerd Font icon codepoints to render from JetBrainsMono Nerd Font.
-# Ghostty only auto-uses its embedded icons when the primary font lacks them
-# AND the width hint matches; explicitly mapping the PUA ranges keeps the
-# icons single-width and correctly scaled even when driven through tmux.
-font-codepoint-map = U+E000-U+F8FF=JetBrainsMono Nerd Font
+# Force Nerd Font PUA to single-width, correctly scaled through tmux
+font-codepoint-map = U+E000-U+F8FF=JetBrainsMonoNL Nerd Font
 
-# --- Your Window Transparency Styles ---
-# Controls window transparency (0.0 is fully clear, 1.0 is fully solid)
-background-opacity = 1
+cursor-style = block
+cursor-style-blink = false
+cursor-color = cell-foreground
+cursor-text = cell-background
+
+unfocused-split-opacity = 0.55
+split-divider-color = #524f67
+
 macos-titlebar-style = hidden
+macos-option-as-alt = true
+mouse-hide-while-typing = true
 
-
-# Adds a beautiful native macOS frosted glass blur behind the text
-background-blur = true
-
-# --- Kill the leftover gap at the very bottom ---
-# Ghostty dumps leftover pixels (window height % line height) at the bottom
-# edge, which sits between the tmux status bar and the window border.
-# flush = no gap below tmux status bar (and text), keep status bar glued.
-window-step-resize = true
-window-padding-color = extend
+confirm-close-surface = false
+window-decoration = auto
 window-padding-x = 0
 window-padding-y = 0
-window-padding-balance = true
+window-padding-balance = false
 
-# --- Background Image ---
+# --- Background image (kept from previous config) ---
 background-image = ~/dotfiles/public/girl1.jpg
 background-image-fit = cover
 background-image-position = center
 background-image-opacity = 1
 
+# --- Window glue (kept so status bar sits flush) ---
+window-step-resize = true
+window-padding-color = extend
+window-save-state = never
+window-show-tab-bar = never
 
-# Tells other apps your native terminal type for perfect compatibility
+# --- Terminal ---
 term = "xterm-ghostty"
 
-# --- Split Pane Dividers ---
-# Red color for split divider lines (Cmd+D splits)
-split-divider-color = #ff0000
+# --- Updates ---
+auto-update = check
+auto-update-channel = stable
 
-# --- Split Pane Navigation ---
-# Move focus between splits with Cmd+Shift+H/J/K/L (vim-style)
+# --- Extras ---
+shell-integration-features = no-cursor
+window-title-font-family = ""
+copy-on-select = clipboard
+clipboard-read = allow
+clipboard-write = allow
+clipboard-trim-trailing-spaces = true
+scrollback-limit = 100000
+
+# --- Shaders ---
+# custom-shader = shaders/bettercrt.glsl
+# custom-shader = shaders/retro-terminal.glsl
+
+# --- Split Navigation (current keybindings; pasted ctrl+space keybinds ignored) ---
 keybind = cmd+shift+h=goto_split:left
 keybind = cmd+shift+j=goto_split:down
 keybind = cmd+shift+k=goto_split:up
