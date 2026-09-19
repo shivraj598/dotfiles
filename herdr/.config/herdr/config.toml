@@ -1,0 +1,13 @@
+# herdr configuration
+# Managed with GNU Stow: ~/dotfiles/herdr/.config/herdr/config.toml -> ~/.config/herdr/config.toml
+# Prefix matches tmux (Ctrl+a)
+
+onboarding = false
+
+[theme]
+name = "catppuccin"
+auto_switch = false
+
+[keys]
+# Use Ctrl+a as prefix to match tmux (default is ctrl+b)
+prefix = "ctrl+a"
