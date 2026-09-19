@@ -20,8 +20,9 @@ background-blur = true
 # --- Kill the leftover gap at the very bottom ---
 # Ghostty dumps leftover pixels (window height % line height) at the bottom
 # edge, which sits between the tmux status bar and the window border.
-# Snapping resizes to whole rows makes the status bar flush with the bottom.
+# flush = no gap below tmux status bar (and text), keep status bar glued.
 window-step-resize = true
+window-padding-color = extend
 window-padding-x = 0
 window-padding-y = 0
 window-padding-balance = true
