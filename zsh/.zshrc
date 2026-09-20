@@ -19,8 +19,8 @@ export EDITOR="code --wait"
 fpath=(/opt/homebrew/share/zsh-completions $fpath)
 autoload -Uz compinit && compinit -i
 
-# Menu-driven completion (navigate with arrows/TAB/Shift-TAB)
-zstyle ':completion:*' menu select
+# Menu-driven completion: auto-complete if 1 match, show menu if multiple
+zstyle ':completion:*' menu select=1
 
 # Better fuzzy matching: case-insensitive + partial paths (a/m → aiml)
 zstyle ':completion:*' matcher-list \
