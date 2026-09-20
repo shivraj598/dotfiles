@@ -16,8 +16,20 @@ export EDITOR="code --wait"
 # 2. AUTO-COMPLETION & SUGGESTIONS
 
 # Load the native Zsh completion system for standard Tab-lists
+fpath=(/opt/homebrew/share/zsh-completions $fpath)
 autoload -Uz compinit && compinit -i
-zstyle ':completion:*' matcher-list 'm:{a-zA-Z}={A-Za-z}' 'r:|=*' 'l:|=* r:|=*'
+
+# Menu-driven completion (navigate with arrows/TAB/Shift-TAB)
+zstyle ':completion:*' menu select
+
+# Better fuzzy matching: case-insensitive + partial paths (a/m → aiml)
+zstyle ':completion:*' matcher-list \
+  'm:{a-zA-Z}={A-Za-z}' \
+  'r:|[._-]=* r:|=*' \
+  'l:|=* r:|=*'
+
+# Prioritize local directories for `cd`
+zstyle ':completion:*:*:cd:*' tag-order local-directories directory-stack path-directories
 
 # zsh-autosuggestions — Real-time command suggestions as you type
 source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
