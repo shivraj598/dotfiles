@@ -75,5 +75,7 @@ Requires Zsh (default shell on macOS) and Homebrew at `/opt/homebrew`.
 - Uses Homebrew shell env (`/opt/homebrew/bin/brew shellenv`)
 - `EDITOR="code --wait"`
 - History shared/appended/instant across all terminals
-- zsh-autosuggestions is **disabled** (faded ghost text was distracting). Re-enable by uncommenting the two `source`/`export` lines.
+- zsh-autosuggestions is enabled and configured to suggest commands from shell history.
 - Starship prompt loaded if installed.
+- Native Zsh completion is enabled: from `~/Learning`, type `cd digital` and press Tab to complete `digital-landfill/`.
+- Tab performs path completion; autosuggestions remain enabled and can be accepted with the Right Arrow key.
