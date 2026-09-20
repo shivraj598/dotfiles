@@ -37,8 +37,8 @@ source /opt/homebrew/share/zsh-autosuggestions/zsh-autosuggestions.zsh
 # Strategy: only suggest from history (faster, smarter)
 export ZSH_AUTOSUGGEST_STRATEGY=(history)
 
-# CRITICAL: Only Tab accepts suggestions (prevents typing interference bugs)
-bindkey '^I' autosuggest-accept
+# Keep Tab available for native Zsh completion of commands, directories, and files.
+bindkey '^I' expand-or-complete
 
 # Make suggestions subtle (dark gray, not distracting)
 export ZSH_AUTOSUGGEST_HIGHLIGHT_STYLE='fg=8'
