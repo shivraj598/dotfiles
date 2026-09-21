@@ -33,10 +33,10 @@ auto-reload-config = true
 # Commands executed after logging into the macOS user session.
 after-login-command = []
 
-# NOTE: JankyBorders is NOT launched here anymore.
-# It is configured and managed by ~/.config/borders/bordersrc
-# (started via the 'borders' Homebrew service). See: dotfiles/borders/.
-after-startup-command = []
+# Start JankyBorders when AeroSpace starts.
+after-startup-command = [
+    'exec-and-forget borders'
+]
 
 
 # ============================================================
