@@ -12,7 +12,7 @@
 # Active color: cyan (#91FFFF)
 options=(
     style=round
-    width=0.0
+    width=5.0
     hidpi=on
     active_color=0xFF91FFFF
     inactive_color=0x00313A31
