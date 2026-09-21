@@ -121,18 +121,11 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "workbench.colorTheme": "Tokyo Night Storm",
+    "workbench.colorTheme": "Palenight Theme",
     "accessibility.dimUnfocused.opacity": 0.5,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "editor.minimap.enabled": false,
-    "workbench.colorCustomizations": {
-        "contrastBorder": "#00000000",
-        "sideBar.border": "#00000000",
-        "panel.border": "#00000000",
-        "editorGroup.border": "#00000000",
-        "activityBar.border": "#00000000"
-    },
     "chat.viewSessions.orientation": "stacked",
     "claudeCode.preferredLocation": "panel"
 }
