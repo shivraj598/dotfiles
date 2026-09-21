@@ -27,8 +27,14 @@ These shortcuts use the VSCodeVim extension. Leader-key shortcuts start with `Sp
 | --- | --- | --- |
 | `j` then `k` | Return to Normal mode | Insert mode |
 | `Esc` | Return to Normal mode | Insert mode |
+| Hold `h` | Repeat movement left | Normal mode |
 | Hold `j` | Repeat movement downward | Normal mode |
 | Hold `k` | Repeat movement upward | Normal mode |
+| Hold `l` | Repeat movement right | Normal mode |
+
+On macOS, VS Code uses the system key-repeat behavior for held Vim motions. The
+VS Code app preference `ApplePressAndHoldEnabled=false` disables the accent menu
+so holding `h`, `j`, `k`, or `l` sends repeated movement keys instead.
 
 ### Navigation
 

@@ -121,7 +121,7 @@
     "[html]": {
         "editor.defaultFormatter": "vscode.html-language-features"
     },
-    "workbench.colorTheme": "Tokyo Night",
+    "workbench.colorTheme": "Tokyo Night Storm",
     "accessibility.dimUnfocused.opacity": 0.5,
     "python.defaultInterpreterPath": "/opt/homebrew/bin/python3",
     "python-envs.defaultEnvManager": "ms-python.python:system",
