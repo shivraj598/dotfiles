@@ -10,7 +10,7 @@
 # ==============================================================================
 
 config-file = .config/themes/rosepine
-background-opacity = 0.88
+background-opacity = 0.30
 background-blur-radius = 25
 
 font-family = JetBrainsMonoNL Nerd Font
@@ -39,10 +39,10 @@ window-padding-y = 0
 window-padding-balance = false
 
 # --- Background image (kept from previous config) ---
-background-image = ~/dotfiles/public/girl1.jpg
+# background-image = ~/dotfiles/public/girl4.jpeg
 background-image-fit = cover
 background-image-position = center
-background-image-opacity = 1
+background-image-opacity = .50
 
 # --- Window glue (kept so status bar sits flush) ---
 window-step-resize = true
