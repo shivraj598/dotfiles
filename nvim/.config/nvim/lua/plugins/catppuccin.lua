@@ -5,6 +5,10 @@ return {
     lazy = true,
     opts = {
       transparent_background = true,
+      float = {
+        transparent = true,
+        solid = false,
+      },
       lsp_styles = {
         underlines = {
           errors = { "undercurl" },
