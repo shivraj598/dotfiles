@@ -1,52 +1,67 @@
 return {
   {
-    "LazyVim/LazyVim",
-    opts = { colorscheme = "catppuccin" },
-  },
-  {
-    "catppuccin",
-    init = function()
-      vim.api.nvim_create_autocmd("ColorScheme", {
-        pattern = "catppuccin",
-        callback = function()
-          for _, group in ipairs({
-            "Normal",
-            "NormalNC",
-            "NormalFloat",
-            "FloatBorder",
-            "SignColumn",
-            "EndOfBuffer",
-            "StatusLine",
-            "StatusLineNC",
-            "SnacksDashboardNormal",
-            "SnacksDashboardHeader",
-            "SnacksDashboardDesc",
-            "SnacksDashboardIcon",
-            "SnacksDashboardKey",
-            "SnacksDashboardFooter",
-            "SnacksDashboardDir",
-          }) do
-            vim.api.nvim_set_hl(0, group, { bg = "none" })
-          end
-        end,
-      })
-    end,
+    "catppuccin/nvim",
+    name = "catppuccin",
+    lazy = true,
     opts = {
       transparent_background = true,
-      flavor = "mocha",
-      float = { transparent = true, solid = false },
-      custom_highlights = function(colors)
-        return {
-          Normal = { bg = colors.none },
-          NormalNC = { bg = colors.none },
-          NormalFloat = { bg = colors.none },
-          FloatBorder = { bg = colors.none },
-          SignColumn = { bg = colors.none },
-          EndOfBuffer = { bg = colors.none },
-          StatusLine = { bg = colors.none },
-          StatusLineNC = { bg = colors.none },
-        }
-      end,
+      lsp_styles = {
+        underlines = {
+          errors = { "undercurl" },
+          hints = { "undercurl" },
+          warnings = { "undercurl" },
+          information = { "undercurl" },
+        },
+      },
+      integrations = {
+        aerial = true,
+        alpha = true,
+        cmp = true,
+        dashboard = true,
+        flash = true,
+        fzf = true,
+        grug_far = true,
+        gitsigns = true,
+        headlines = true,
+        illuminate = true,
+        indent_blankline = { enabled = true },
+        leap = true,
+        lsp_trouble = true,
+        mason = true,
+        mini = true,
+        navic = { enabled = true, custom_bg = "lualine" },
+        neotest = true,
+        neotree = true,
+        noice = true,
+        notify = true,
+        snacks = true,
+        telescope = true,
+        treesitter_context = true,
+        which_key = true,
+      },
     },
+    specs = {
+      {
+        "akinsho/bufferline.nvim",
+        optional = true,
+        opts = function(_, opts)
+          if (vim.g.colors_name or ""):find("catppuccin") then
+            opts.highlights = require("catppuccin.special.bufferline").get_theme()
+          end
+        end,
+      },
+    },
+  },
+  {
+    "folke/tokyonight.nvim",
+    lazy = true,
+    opts = {
+      style = "moon",
+      transparent = true,
+    },
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = { colorscheme = "catppuccin" },
   },
 }
