@@ -559,6 +559,26 @@ run = 'move-node-to-workspace A'
 if.app-id = 'com.microsoft.Word'
 run = 'move-node-to-workspace A'
 
+# Cline
+[[on-window-detected]]
+if.app-id = 'bot.cline.app'
+run = 'move-node-to-workspace A'
+
+# OpenCode
+[[on-window-detected]]
+if.app-id = 'ai.opencode.desktop'
+run = 'move-node-to-workspace A'
+
+# Ollama
+[[on-window-detected]]
+if.app-id = 'com.electron.ollama'
+run = 'move-node-to-workspace A'
+
+# Hermes
+[[on-window-detected]]
+if.app-id = 'com.nousresearch.hermes.setup'
+run = 'move-node-to-workspace A'
+
 # Microsoft Excel
 [[on-window-detected]]
 if.app-id = 'com.microsoft.Excel'
