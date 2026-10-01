@@ -10,7 +10,7 @@
 # ==============================================================================
 
 config-file = .config/themes/rosepine
-background-opacity = 1
+background-opacity = 0.50
 background-blur-radius = 25
 
 font-family = JetBrainsMonoNL Nerd Font
@@ -39,7 +39,7 @@ window-padding-y = 0
 window-padding-balance = false
 
 # --- Background image (kept from previous config) ---
-background-image = ~/dotfiles/public/girl4.jpeg
+# background-image = ~/dotfiles/public/girl4.jpeg
 background-image-fit = cover
 background-image-position = center
 background-image-opacity = 0.10
