@@ -111,4 +111,7 @@ alias cc='claude'
 
 
 #zoxide
-eval "$(zoxide init zsh)"
+eval "$(zoxide init zsh)"export PATH="$HOME/.npm-global/bin:/usr/local/share/npm/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:/usr/local/bin:$PATH"
+export PATH="$HOME/.npm-global/bin:/usr/local/bin:$PATH"
+
