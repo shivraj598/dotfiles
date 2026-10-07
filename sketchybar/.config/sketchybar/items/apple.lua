@@ -2,8 +2,8 @@ local colors = require("colors")
 local icons = require("icons")
 local settings = require("settings")
 
--- Padding item required because of bracket
-sbar.add("item", { width = 5 })
+-- Edge spacer (zeroed: Apple sits flush at screen edge)
+sbar.add("item", { width = 0 })
 
 local apple = sbar.add("item", {
   icon = {
