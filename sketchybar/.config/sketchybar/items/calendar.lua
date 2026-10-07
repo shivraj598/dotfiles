@@ -1,8 +1,8 @@
 local settings = require("settings")
 local colors = require("colors")
 
--- Padding item required because of bracket
-sbar.add("item", { position = "right", width = settings.group_paddings })
+-- Edge spacer (zeroed: last widget sits flush at screen edge)
+sbar.add("item", { position = "right", width = 0 })
 
 local cal = sbar.add("item", {
   icon = {
