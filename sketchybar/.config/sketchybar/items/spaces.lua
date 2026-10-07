@@ -7,6 +7,7 @@ local workspace_names = { "I", "B", "T", "N", "S", "A", "1", "2" }
 local laptop_display = 1
 local workspace_items = {}
 local workspace_brackets = {}
+local workspace_paddings = {}
 
 for _, workspace_name in ipairs(workspace_names) do
   local space = sbar.add("item", "space." .. workspace_name, {
@@ -52,12 +53,13 @@ for _, workspace_name in ipairs(workspace_names) do
   })
   workspace_brackets[workspace_name] = space_bracket
 
-  -- Padding space
-  sbar.add("item", "space.padding." .. workspace_name, {
+  -- Padding space (follows its workspace's display so hidden workspaces leave no gap)
+  local padding = sbar.add("item", "space.padding." .. workspace_name, {
     position = "left",
     script = "",
     width = settings.group_paddings,
   })
+  workspace_paddings[workspace_name] = padding
 
   space:subscribe("mouse.clicked", function()
     sbar.exec("aerospace workspace " .. workspace_name)
@@ -135,6 +137,7 @@ local function update_display_assignment()
         and external_display or laptop_display
       workspace_items[workspace_name]:set({ display = display })
       workspace_brackets[workspace_name]:set({ display = display })
+      workspace_paddings[workspace_name]:set({ display = display })
     end
   end)
 end
