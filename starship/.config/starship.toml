@@ -6,6 +6,7 @@ $git_branch\
 $git_status\
 $time\
 $line_break\
+$custom\
 $character"""
 
 # Shows your current Git branch
@@ -30,6 +31,15 @@ disabled = false
 format = "at [$time]($style) "
 time_format = "%R" 
 style = "bold yellow"
+
+# Shows "ssh <ip>" right before ❯, only while on an SSH session.
+# On the remote machine SSH_CONNECTION="<client-ip> <client-port> <server-ip> <server-port>",
+# so field 3 is the IP you ssh'd into. Nothing renders locally (no SSH_CONNECTION).
+[custom.ssh_ip]
+command = "echo $SSH_CONNECTION | awk '{print $3}'"
+when = "test -n \"$SSH_CONNECTION\""
+format = "[ssh $output](bold red) "
+description = "IP of the machine you ssh'd into"
 
 # Customizes the prompt symbol
 [character]

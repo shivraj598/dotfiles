@@ -129,3 +129,60 @@ export NVM_DIR="/Users/shivrajtimilsena/Library/Application Support/Herd/config/
 
 # Herd injected PHP binary.
 export PATH="/Users/shivrajtimilsena/Library/Application Support/Herd/bin":$PATH
+
+# 7. SSH INDICATOR
+# - tmux window renamed to "ssh <ip>" while ssh'd (visible in bottom status bar)
+# - the "ssh <ip> ❯" prompt itself is rendered by starship's custom.ssh_ip
+#   module (starship.toml), which reads $SSH_CONNECTION on the REMOTE side.
+ssh() {
+  local dest="" arg skip_next=0
+  for arg in "$@"; do
+    if (( skip_next )); then skip_next=0; continue; fi
+    case "$arg" in
+      --) continue ;;
+      --*) continue ;;
+      -[bcDEeFIiJLlmOopQRSWw])
+        skip_next=1; continue ;;
+      -*) continue ;;
+      *)
+        # first non-flag arg is the destination (user@host or IP)
+        if [[ -z "$dest" ]]; then
+          dest="${arg##*@}"
+        fi
+        ;;
+    esac
+  done
+  # Fallback: last arg if parsing found nothing (e.g. only flags + host)
+  if [[ -z "$dest" ]]; then
+    for arg in "$@"; do
+      [[ "$arg" == -* ]] || dest="${arg##*@}"
+    done
+  fi
+
+  local old_tmux_name=""
+  if [[ -n "$dest" ]]; then
+    # Terminal title (visible only if titlebar/tab bar shows titles)
+    printf '\033]0;ssh %s\007' "$dest"
+    printf '\033]30;ssh %s\007' "$dest"
+    if [[ -n "$TMUX" ]] && command -v tmux &>/dev/null; then
+      old_tmux_name="$(tmux display-message -p '#W' 2>/dev/null)"
+      tmux rename-window "ssh $dest" 2>/dev/null
+    fi
+  fi
+
+  command ssh "$@"
+  local ret=$?
+
+  # Restore on exit / disconnect
+  if [[ -n "$dest" ]]; then
+    if [[ -n "$TMUX" ]] && command -v tmux &>/dev/null; then
+      if [[ -n "$old_tmux_name" ]]; then
+        tmux rename-window "$old_tmux_name" 2>/dev/null
+      fi
+      printf '\033]0;%s\007' "${old_tmux_name:-zsh}"
+    else
+      printf '\033]0;%s\007' "%m:%~"
+    fi
+  fi
+  return $ret
+}
