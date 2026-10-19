@@ -436,6 +436,16 @@ run = 'move-node-to-workspace I'
 if.app-id = 'com.exafunction.windsurf'
 run = 'move-node-to-workspace I'
 
+# Google Antigravity IDE
+[[on-window-detected]]
+if.app-id = 'com.google.antigravity-ide'
+run = 'move-node-to-workspace I'
+
+# Google Antigravity
+[[on-window-detected]]
+if.app-id = 'com.google.antigravity'
+run = 'move-node-to-workspace I'
+
 # Apple iPhone Simulator
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
@@ -547,6 +557,11 @@ run = 'move-node-to-workspace A'
 # Microsoft Copilot
 [[on-window-detected]]
 if.app-id = 'com.microsoft.copilot'
+run = 'move-node-to-workspace A'
+
+# Microsoft 365 Copilot
+[[on-window-detected]]
+if.app-id = 'com.microsoft.m365copilot'
 run = 'move-node-to-workspace A'
 
 # Microsoft 365 (Office suite)

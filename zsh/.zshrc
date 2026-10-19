@@ -186,3 +186,6 @@ ssh() {
   fi
   return $ret
 }
+
+# Added by Antigravity IDE
+export PATH="/Users/shivrajtimilsena/.antigravity-ide/antigravity-ide/bin:$PATH"
