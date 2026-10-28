@@ -57,7 +57,7 @@ setopt INC_APPEND_HISTORY  # Save instantly
 
 
 # 4. LIGHTWEIGHT ALIASES
-
+alias agy='antigravity-ide'
 alias cl='clear; printf "\033[3J"; tmux clear-history 2>/dev/null; printf "\033[H\033[2J\033[3J"'
 alias ls="ls -G"          # Colorful directory listings on macOS
 alias ll="ls -alG"        # Complete list including hidden files
@@ -107,7 +107,6 @@ export VIRTUAL_ENV_DISABLE_PROMPT=1
 
 #agent harness
 alias oc='opencode'
-alias cc='claude'
 
 
 #zoxide
