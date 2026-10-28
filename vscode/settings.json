@@ -61,7 +61,8 @@
         "/Users/shivrajtimilsena/projects/Bolum": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
         "/Users/shivrajtimilsena/projects/ProjectFlow": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
         "/Users/shivrajtimilsena/college/awe/comp1-shivraj": "f53bacb4-da0b-486d-89f9-08e598083d54",
-        "/Users/shivrajtimilsena/projects/Health-AI-Call-Agent-SaaS-Starter-File": "487e0e1d-a973-4ccc-8d85-406e874d28ff"
+        "/Users/shivrajtimilsena/projects/Health-AI-Call-Agent-SaaS-Starter-File": "487e0e1d-a973-4ccc-8d85-406e874d28ff",
+        "/Users/shivrajtimilsena/projects/gpt2LiveStream": "487e0e1d-a973-4ccc-8d85-406e874d28ff"
     },
     "python.analysis.typeCheckingMode": "strict",
     "yaml.disableSchemaDetection": [
@@ -135,5 +136,6 @@
     "python-envs.defaultEnvManager": "ms-python.python:system",
     "editor.minimap.enabled": false,
     "chat.viewSessions.orientation": "stacked",
-    "claudeCode.preferredLocation": "panel"
+    "claudeCode.preferredLocation": "panel",
+    "claudeCode.hideOnboarding": true
 }
