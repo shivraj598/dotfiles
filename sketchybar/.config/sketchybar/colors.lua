@@ -10,6 +10,7 @@ return {
   purple = 0xffc39bf7,
   purple_dim = 0xff4a3a75,
   purple_bg = 0xff4b3878,
+  purple_soft = 0x99c39bf7,
   grey = 0xff8c80aa,
   transparent = 0x00000000,
 
