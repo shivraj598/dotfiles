@@ -9,12 +9,12 @@
 # JankyBorders color format: 0xAARRGGBB  (AA=alpha, RRGGBB=color)
 # ============================================================
 
-# Active color: cyan (#91FFFF)
+# Active color: purple (#C39BF7), matches SketchyBar's accent
 options=(
     style=round
     width=5.0
     hidpi=on
-    active_color=0xFF91FFFF
+    active_color=0xFFC39BF7
     inactive_color=0x00313A31
     background_color=0x00000000
 )
