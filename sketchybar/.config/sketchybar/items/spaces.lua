@@ -17,8 +17,8 @@ for _, workspace_name in ipairs(workspace_names) do
       string = workspace_name,
       padding_left = 8,
       padding_right = 8,
-      color = colors.white,
-      highlight_color = colors.purple,
+      color = colors.grey,
+      highlight_color = colors.white,
     },
     label = {
       width = 0,
@@ -46,7 +46,7 @@ for _, workspace_name in ipairs(workspace_names) do
   local space_bracket = sbar.add("bracket", { space.name }, {
     background = {
       color = colors.transparent,
-      border_color = colors.bg2,
+      border_color = colors.purple_dim,
       height = 28,
       border_width = 2
     }
@@ -72,10 +72,13 @@ local function update_highlight(focused_workspace)
     workspace_items[workspace_name]:set({
       icon = { highlight = selected, },
       label = { highlight = selected },
-      background = { border_color = selected and colors.black or colors.bg2 }
+      background = {
+        color = selected and colors.purple_bg or colors.bg1,
+        border_color = selected and colors.black or colors.bg2,
+      }
     })
     workspace_brackets[workspace_name]:set({
-      background = { border_color = selected and colors.purple or colors.bg2 }
+      background = { border_color = selected and colors.purple or colors.purple_dim }
     })
   end
 end
