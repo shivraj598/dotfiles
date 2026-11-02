@@ -8,6 +8,8 @@ return {
   orange = 0xfff5a97f,
   magenta = 0xffe0a3f0,
   purple = 0xffc39bf7,
+  purple_dim = 0xff4a3a75,
+  purple_bg = 0xff4b3878,
   grey = 0xff8c80aa,
   transparent = 0x00000000,
 
