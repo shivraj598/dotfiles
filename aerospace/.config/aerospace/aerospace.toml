@@ -709,13 +709,13 @@ run = 'layout floating'
 
 # Always use the MacBook display.
 I = 'Built-in Retina Display'
+B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
-N = 'Built-in Retina Display'
 S = 'Built-in Retina Display'
-A = 'Built-in Retina Display'
 
 # Prefer the external monitor.
 # Fall back to the MacBook when the external monitor is absent.
-B = ['secondary', 'Built-in Retina Display']
+N = ['secondary', 'Built-in Retina Display']
+A = ['secondary', 'Built-in Retina Display']
 1 = ['secondary', 'Built-in Retina Display']
 2 = ['secondary', 'Built-in Retina Display']
