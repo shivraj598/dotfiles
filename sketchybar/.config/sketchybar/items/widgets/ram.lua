@@ -41,7 +41,7 @@ ram:subscribe("mouse.clicked", function()
 end)
 
 sbar.add("bracket", "widgets.ram.bracket", { ram.name }, {
-  background = { color = colors.bg1 }
+  background = { color = colors.bg1, border_width = 1, border_color = colors.purple_soft }
 })
 
 sbar.add("item", "widgets.ram.padding", {
