@@ -31,10 +31,10 @@ borders &
 | `style` | `round` | Rounded corner borders |
 | `width` | `5.0` | Border thickness in px |
 | `hidpi` | `on` | Crisp borders on Retina displays |
-| `active_color` | `0xff90EE90` | Light green border on the focused window |
+| `active_color` | `0xFFC39BF7` | Purple border on the focused window |
 | `inactive_color` | `0x00313A31` | Transparent/invisible border on unfocused windows |
 | `background_color` | `0x00000000` | Transparent background |
 
 Color format: `0xAARRGGBB` (Alpha, Red, Green, Blue).
 
-The focused window gets a **light green** border; all other windows have no visible border.
+The focused window gets a **purple** border; all other windows have no visible border.
