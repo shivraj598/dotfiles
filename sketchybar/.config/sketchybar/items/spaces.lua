@@ -18,7 +18,7 @@ for _, workspace_name in ipairs(workspace_names) do
       padding_left = 8,
       padding_right = 8,
       color = colors.white,
-      highlight_color = colors.red,
+      highlight_color = colors.purple,
     },
     label = {
       width = 0,
@@ -75,7 +75,7 @@ local function update_highlight(focused_workspace)
       background = { border_color = selected and colors.black or colors.bg2 }
     })
     workspace_brackets[workspace_name]:set({
-      background = { border_color = selected and colors.grey or colors.bg2 }
+      background = { border_color = selected and colors.purple or colors.bg2 }
     })
   end
 end
@@ -132,7 +132,7 @@ local function update_display_assignment()
     end
 
     for _, workspace_name in ipairs(workspace_names) do
-      local is_laptop_workspace = workspace_name == "I" or workspace_name == "T" or workspace_name == "N" or workspace_name == "S" or workspace_name == "A"
+      local is_laptop_workspace = workspace_name == "I" or workspace_name == "B" or workspace_name == "T" or workspace_name == "S"
       local display = external_display ~= nil and not is_laptop_workspace
         and external_display or laptop_display
       workspace_items[workspace_name]:set({ display = display })
