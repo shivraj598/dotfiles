@@ -37,7 +37,7 @@ sbar.add("bracket", { cal.name }, {
   background = {
     color = colors.transparent,
     height = 30,
-    border_color = colors.purple,
+    border_color = colors.purple_soft,
   }
 })
 
