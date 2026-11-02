@@ -78,7 +78,11 @@ local function update_highlight(focused_workspace)
       }
     })
     workspace_brackets[workspace_name]:set({
-      background = { border_color = selected and colors.purple or colors.purple_dim }
+      background = {
+        border_color = selected and colors.purple or colors.purple_dim,
+        border_width = selected and 4 or 2,
+        height = selected and 32 or 28,
+      }
     })
   end
 end
