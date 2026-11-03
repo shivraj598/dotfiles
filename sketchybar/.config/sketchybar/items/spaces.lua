@@ -98,7 +98,8 @@ local function update_app_icons()
     end
 
     for workspace_name, raw_application_name in output:gmatch("([^|\r\n]+)|([^\r\n]*)") do
-      local application_name = raw_application_name:gsub("^%s+", ""):gsub("%s+$", "")
+      -- strip whitespace and the invisible U+200E mark some apps (WhatsApp) prefix their name with
+      local application_name = raw_application_name:gsub("\226\128\142", ""):gsub("^%s+", ""):gsub("%s+$", "")
       local seen_apps = seen[workspace_name]
       if seen_apps and application_name ~= "" and not seen_apps[application_name] then
         seen_apps[application_name] = true
