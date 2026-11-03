@@ -1,720 +1,361 @@
-# ============================================================
-# AEROSPACE CONFIGURATION
-# Recommended file:
-# ~/.config/aerospace/aerospace.toml
-#
-# Do not keep another AeroSpace config at ~/.aerospace.toml
-# at the same time, because AeroSpace reports ambiguous config
-# locations when both files exist.
-# ============================================================
-
-
-# ============================================================
-# CONFIGURATION VERSION
-# ============================================================
+# AeroSpace config — ~/.config/aerospace/aerospace.toml (stowed from ~/dotfiles)
+# Keep only this file; a second ~/.aerospace.toml makes the config location ambiguous.
+# Options left at their defaults are omitted. Reference: https://nikitabobko.github.io/AeroSpace/guide
 
 config-version = 2
 
-
-# ============================================================
-# STARTUP
-# ============================================================
-
-# Start AeroSpace automatically when logging into macOS.
 start-at-login = true
-
-# Automatically reload this configuration whenever it is saved.
-#
-# After adding this option for the first time, manually reload
-# AeroSpace once. Future configuration changes will then reload
-# automatically.
 auto-reload-config = true
+automatically-unhide-macos-hidden-apps = true
 
-# Commands executed after logging into the macOS user session.
-after-login-command = []
+# JankyBorders (exits immediately if the brew service already runs it)
+after-startup-command = ['exec-and-forget borders']
 
-# Start JankyBorders when AeroSpace starts.
-after-startup-command = [
-    'exec-and-forget borders'
-]
-
-
-# ============================================================
-# SKETCHYBAR INTEGRATION
-# ============================================================
-
-# Notify SketchyBar whenever the focused AeroSpace workspace
-# changes.
-#
-# SketchyBar must listen to the custom event:
-# aerospace_workspace_change
+# SketchyBar listens for the custom event `aerospace_workspace_change`
 exec-on-workspace-change = [
-    '/bin/bash',
-    '-c',
-    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE="$AEROSPACE_FOCUSED_WORKSPACE" PREV_WORKSPACE="$AEROSPACE_PREV_WORKSPACE"'
+    '/bin/bash', '-c',
+    'sketchybar --trigger aerospace_workspace_change FOCUSED_WORKSPACE="$AEROSPACE_FOCUSED_WORKSPACE" PREV_WORKSPACE="$AEROSPACE_PREV_WORKSPACE"',
 ]
 
+# I = IDE, B = Browser, T = Terminal, N = Notes, S = Socials, A = AI, 1-2 = spare
+# Keep in sync with workspace_names in sketchybar/items/spaces.lua
+persistent-workspaces = ['I', 'B', 'T', 'N', 'S', 'A', '1', '2']
 
-# ============================================================
-# WORKSPACES
-# ============================================================
-
-# I = IDE
-# B = Browser
-# T = Terminal
-# N = Notes
-# S = Socials
-# A = AI / Chatbots
-#
-# 1-2 = Additional workspaces
-persistent-workspaces = [
-    'I',
-    'B',
-    'T',
-    'N',
-    'S',
-    'A',
-    '1',
-    '2'
-]
-
-
-
-
-# ============================================================
-# CONTAINER NORMALIZATION
-# ============================================================
-
-# Automatically flatten unnecessary nested containers.
-enable-normalization-flatten-containers = true
-
-# Normalize opposite orientations in nested containers.
-enable-normalization-opposite-orientation-for-nested-containers = true
-
-
-# ============================================================
-# DEFAULT LAYOUT
-# ============================================================
-
-# Padding used for accordion layouts.
-accordion-padding = 30
-
-# New workspaces use tiled layout.
-default-root-container-layout = 'tiles'
-
-# Open new tiled windows left/right by default.
-default-root-container-orientation = 'auto'
-
-
-# ============================================================
-# MOUSE BEHAVIOR
-# ============================================================
-
-# Move the mouse to the center of a monitor when keyboard focus
-# changes to that monitor.
-on-focused-monitor-changed = [
-    'move-mouse monitor-lazy-center'
-]
-
-# Move the mouse to the center of the focused window whenever
-# focus changes between windows.
+# Mouse follows keyboard focus
+on-focused-monitor-changed = ['move-mouse monitor-lazy-center']
 on-focus-changed = 'move-mouse window-lazy-center'
 
 
-# ============================================================
-# MACOS BEHAVIOR
-# ============================================================
-
-# Automatically unhide applications hidden through macOS.
-automatically-unhide-macos-hidden-apps = true
-
-
-# ============================================================
-# KEYBOARD MAPPING
-# ============================================================
-
-[key-mapping]
-
-preset = 'qwerty'
-
-
-# ============================================================
-# WINDOW GAPS
-# ============================================================
+# ---------- Gaps ----------
 
 [gaps]
-
-# Space between tiled windows.
 inner.horizontal = 12
 inner.vertical = 12
-
-# Space between windows and the monitor edges.
 outer.left = 14
 outer.bottom = 10
 outer.right = 14
-
-# Keep the original conditional top gap.
-outer.top = [
-    { monitor."Built-in Retina Display" = 12 },
-    45
-]
+outer.top = [{ monitor."Built-in Retina Display" = 12 }, 45]
 
 
-# ============================================================
-# MAIN KEYBOARD SHORTCUTS
-# ============================================================
+# ---------- Main mode (Option = alt) ----------
 
 [mode.main.binding]
 
-
-# ============================================================
-# WINDOW LAYOUTS
-# ============================================================
-
-# Option + Slash
-# Toggle tiled layout orientation.
+# Layout
 alt-slash = 'layout tiles horizontal vertical'
-
-# Option + Comma
-# Toggle accordion layout orientation.
 alt-comma = 'layout accordion horizontal vertical'
-
-# Option + F
-# Toggle AeroSpace fullscreen mode.
 alt-f = 'fullscreen'
-
-# Option + Shift + Space
-# Toggle the focused window between floating and tiled.
 alt-shift-space = 'layout floating tiling'
-
-# Option + Equal
-# Balance the sizes of all tiled windows.
 alt-equal = 'balance-sizes'
 
-
-# ============================================================
-# FOCUS WINDOWS
-# Option + H/J/K/L
-# ============================================================
-
+# Focus / move
 alt-h = 'focus left'
 alt-j = 'focus down'
 alt-k = 'focus up'
 alt-l = 'focus right'
-
-
-# ============================================================
-# MOVE WINDOWS
-# Option + Shift + H/J/K/L
-# ============================================================
-
 alt-shift-h = 'move left'
 alt-shift-j = 'move down'
 alt-shift-k = 'move up'
 alt-shift-l = 'move right'
 
-
-# ============================================================
-# RESIZE WINDOWS
-# ============================================================
-
-# Option + Minus decreases the focused window size.
+# Resize (alt-equal is taken by balance-sizes, so grow is alt-shift-equal)
 alt-minus = 'resize smart -50'
-
-# Option + Shift + Equal increases the focused window size.
-#
-# This avoids conflicting with Option + Equal, which is used
-# above for balancing all window sizes.
 alt-shift-equal = 'resize smart +50'
 
-
-# ============================================================
-# SWITCH WORKSPACES
-# ============================================================
-
-# Option + I opens the IDE workspace.
+# Switch workspace
 alt-i = 'workspace I'
-
-# Option + B opens the Browser workspace.
 alt-b = 'workspace B'
-
-# Option + T opens the Terminal workspace.
 alt-t = 'workspace T'
-
-# Option + N opens the Notes workspace.
 alt-n = 'workspace N'
-
-# Option + S opens the Socials workspace.
 alt-s = 'workspace S'
-
-# Option + A opens the AI / Chatbots workspace.
 alt-a = 'workspace A'
-
-# Option + Number opens an additional workspace.
 alt-1 = 'workspace 1'
 alt-2 = 'workspace 2'
 
-
-# ============================================================
-# MOVE WINDOWS TO WORKSPACES
-# ============================================================
-
-# Option + Shift + I
-# Move the focused window to the IDE workspace and follow it.
+# Move window to workspace and follow it
 alt-shift-i = 'move-node-to-workspace I --focus-follows-window'
-
-# Option + Shift + B
-# Move the focused window to the Browser workspace and follow it.
 alt-shift-b = 'move-node-to-workspace B --focus-follows-window'
-
-# Option + Shift + T
-# Move the focused window to the Terminal workspace and follow it.
 alt-shift-t = 'move-node-to-workspace T --focus-follows-window'
-
-# Option + Shift + N
-# Move the focused window to the Notes workspace and follow it.
 alt-shift-n = 'move-node-to-workspace N --focus-follows-window'
-
-# Option + Shift + S
-# Move the focused window to the Socials workspace and follow it.
 alt-shift-s = 'move-node-to-workspace S --focus-follows-window'
-
-# Option + Shift + A
-# Move the focused window to the AI / Chatbots workspace and follow it.
 alt-shift-a = 'move-node-to-workspace A --focus-follows-window'
-
-# Option + Shift + Number
-# Move the focused window to an additional workspace and follow it.
 alt-shift-1 = 'move-node-to-workspace 1 --focus-follows-window'
 alt-shift-2 = 'move-node-to-workspace 2 --focus-follows-window'
 
-
-# ============================================================
-# WORKSPACE NAVIGATION
-# ============================================================
-
-# Option + Tab
-# Move between the current and previously focused workspace.
+# Workspace navigation
 alt-tab = 'workspace-back-and-forth'
-
-# Option + Shift + Tab
-# Move the current workspace to the next monitor.
 alt-shift-tab = 'move-workspace-to-monitor --wrap-around next'
 
-
-# ============================================================
-# SERVICE MODE
-# ============================================================
-
-# Option + Shift + Semicolon enters service mode.
 alt-shift-semicolon = 'mode service'
 
 
-# ============================================================
-# SERVICE MODE SHORTCUTS
-# ============================================================
+# ---------- Service mode (every key returns to main) ----------
 
 [mode.service.binding]
-
-# Escape reloads the config and returns to main mode.
-esc = [
-    'reload-config',
-    'mode main'
-]
-
-# R flattens the current workspace tree and returns to main mode.
-r = [
-    'flatten-workspace-tree',
-    'mode main'
-]
-
-# F toggles floating/tiling and returns to main mode.
-f = [
-    'layout floating tiling',
-    'mode main'
-]
-
-# Backspace closes every window except the focused window.
-backspace = [
-    'close-all-windows-but-current',
-    'mode main'
-]
+esc = ['reload-config', 'mode main']
+r = ['flatten-workspace-tree', 'mode main']
+f = ['layout floating tiling', 'mode main']
+backspace = ['close-all-windows-but-current', 'mode main']
+h = ['join-with left', 'mode main']
+j = ['join-with down', 'mode main']
+k = ['join-with up', 'mode main']
+l = ['join-with right', 'mode main']
 
 
-# ============================================================
-# JOIN WINDOWS
-# ============================================================
+# ---------- App -> workspace rules ----------
+# Only the first matching rule runs. Find an app's ID with:
+#   osascript -e 'id of app "AppName"'
 
-# H joins with the container on the left.
-h = [
-    'join-with left',
-    'mode main'
-]
-
-# J joins with the container below.
-j = [
-    'join-with down',
-    'mode main'
-]
-
-# K joins with the container above.
-k = [
-    'join-with up',
-    'mode main'
-]
-
-# L joins with the container on the right.
-l = [
-    'join-with right',
-    'mode main'
-]
-
-
-
-
-# ============================================================
-# AUTOMATIC APPLICATION ASSIGNMENT
-# ============================================================
-
-
-# ============================================================
-# TERMINALS -> T
-# ============================================================
-
-# Ghostty
+# Terminals -> T
 [[on-window-detected]]
 if.app-id = 'com.mitchellh.ghostty'
 run = 'move-node-to-workspace T'
 
-# Apple Terminal
 [[on-window-detected]]
 if.app-id = 'com.apple.Terminal'
 run = 'move-node-to-workspace T'
 
-# iTerm2
 [[on-window-detected]]
 if.app-id = 'com.googlecode.iterm2'
 run = 'move-node-to-workspace T'
 
-# WezTerm
 [[on-window-detected]]
 if.app-id = 'com.github.wez.wezterm'
 run = 'move-node-to-workspace T'
 
-
-# ============================================================
-# IDES AND DEVELOPMENT APPLICATIONS -> I
-# ============================================================
-
-# Visual Studio Code
+# IDEs -> I
 [[on-window-detected]]
 if.app-id = 'com.microsoft.VSCode'
 run = 'move-node-to-workspace I'
 
-# Cursor using its application ID
 [[on-window-detected]]
-if.app-id = 'com.todesktop.230313mzl4w4u92'
+if.app-id = 'com.todesktop.230313mzl4w4u92' # Cursor
 run = 'move-node-to-workspace I'
 
-# Cursor fallback rule in case its application ID changes
-[[on-window-detected]]
-if.app-name-regex-substring = '^Cursor$'
-run = 'move-node-to-workspace I'
-
-# Zed
 [[on-window-detected]]
 if.app-id = 'dev.zed.Zed'
 run = 'move-node-to-workspace I'
 
-# VSCodium
 [[on-window-detected]]
 if.app-id = 'com.vscodium'
 run = 'move-node-to-workspace I'
 
-# Windsurf
 [[on-window-detected]]
 if.app-id = 'com.exafunction.windsurf'
 run = 'move-node-to-workspace I'
 
-# Google Antigravity IDE
 [[on-window-detected]]
 if.app-id = 'com.google.antigravity-ide'
 run = 'move-node-to-workspace I'
 
-# Google Antigravity
 [[on-window-detected]]
 if.app-id = 'com.google.antigravity'
 run = 'move-node-to-workspace I'
 
-# Apple iPhone Simulator
+[[on-window-detected]]
+if.app-id = 'com.t3tools.t3code' # T3 Code
+run = 'move-node-to-workspace I'
+
 [[on-window-detected]]
 if.app-id = 'com.apple.iphonesimulator'
-run = [
-    'move-node-to-workspace I',
-    'layout tiling'
-]
+run = ['move-node-to-workspace I', 'layout tiling']
 
-
-# ============================================================
-# BROWSERS -> B
-# ============================================================
-
-# Safari
+# Browsers -> B
 [[on-window-detected]]
 if.app-id = 'com.apple.Safari'
 run = 'move-node-to-workspace B'
 
-# Google Chrome
 [[on-window-detected]]
 if.app-id = 'com.google.Chrome'
 run = 'move-node-to-workspace B'
 
-# Brave Browser
 [[on-window-detected]]
 if.app-id = 'com.brave.Browser'
 run = 'move-node-to-workspace B'
 
-# Arc Browser
 [[on-window-detected]]
-if.app-id = 'company.thebrowser.Browser'
+if.app-id = 'company.thebrowser.Browser' # Arc
 run = 'move-node-to-workspace B'
 
-# Chromium
 [[on-window-detected]]
 if.app-id = 'org.chromium.Chromium'
 run = 'move-node-to-workspace B'
 
-# Zen Browser
 [[on-window-detected]]
 if.app-id = 'app.zen-browser.zen'
 run = 'move-node-to-workspace B'
 
-
-# ============================================================
-# SOCIAL APPLICATIONS -> S
-# ============================================================
-
-# WhatsApp
+# Socials -> S
 [[on-window-detected]]
 if.app-id = 'net.whatsapp.WhatsApp'
 run = 'move-node-to-workspace S'
 
-# Telegram
 [[on-window-detected]]
 if.app-id = 'ru.keepcoder.Telegram'
 run = 'move-node-to-workspace S'
 
-# Discord
 [[on-window-detected]]
-if.app-id = 'com.hop.Discord'
+if.app-id = 'com.hnc.Discord'
 run = 'move-node-to-workspace S'
 
-# Discord PTB
 [[on-window-detected]]
-if.app-id = 'com.discord.Discord'
+if.app-id = 'com.hnc.DiscordPTB'
 run = 'move-node-to-workspace S'
 
-# Slack
 [[on-window-detected]]
-if.app-id = 'com.tinyspeck.slackmacgap'
+if.app-id = 'com.tinyspeck.slackmacgap' # Slack
 run = 'move-node-to-workspace S'
 
-# Signal
 [[on-window-detected]]
 if.app-id = 'org.signal.Signal'
 run = 'move-node-to-workspace S'
 
-# WeChat
 [[on-window-detected]]
 if.app-id = 'com.tencent.xinWeChat'
 run = 'move-node-to-workspace S'
 
-# FaceTime
 [[on-window-detected]]
-if.app-id = 'com.apple.facetime'
+if.app-id = 'com.apple.FaceTime'
 run = 'move-node-to-workspace S'
 
-
-# ============================================================
-# AI / CHATBOT APPLICATIONS -> A
-# ============================================================
-
-# Claude Desktop
+# AI / chatbots (+ Microsoft Office) -> A
 [[on-window-detected]]
 if.app-id = 'com.anthropic.claudefordesktop'
 run = 'move-node-to-workspace A'
 
-# Claude Desktop (older bundle id)
 [[on-window-detected]]
-if.app-id = 'com.anthropic.claude'
+if.app-id = 'com.openai.chat' # ChatGPT
 run = 'move-node-to-workspace A'
 
-# ChatGPT
-[[on-window-detected]]
-if.app-id = 'com.openai.chat'
-run = 'move-node-to-workspace A'
-
-# Microsoft Copilot
-[[on-window-detected]]
-if.app-id = 'com.microsoft.copilot'
-run = 'move-node-to-workspace A'
-
-# Microsoft 365 Copilot
-[[on-window-detected]]
-if.app-id = 'com.microsoft.m365copilot'
-run = 'move-node-to-workspace A'
-
-# Microsoft 365 (Office suite)
-[[on-window-detected]]
-if.app-id = 'com.microsoft.office'
-run = 'move-node-to-workspace A'
-
-# Microsoft Word
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Word'
-run = 'move-node-to-workspace A'
-
-# Cline
-[[on-window-detected]]
-if.app-id = 'bot.cline.app'
-run = 'move-node-to-workspace A'
-
-# OpenCode
-[[on-window-detected]]
-if.app-id = 'ai.opencode.desktop'
-run = 'move-node-to-workspace A'
-
-# Ollama
-[[on-window-detected]]
-if.app-id = 'com.electron.ollama'
-run = 'move-node-to-workspace A'
-
-# Hermes
-[[on-window-detected]]
-if.app-id = 'com.nousresearch.hermes.setup'
-run = 'move-node-to-workspace A'
-
-# Microsoft Excel
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Excel'
-run = 'move-node-to-workspace A'
-
-# Microsoft PowerPoint
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Powerpoint'
-run = 'move-node-to-workspace A'
-
-# Microsoft Outlook
-[[on-window-detected]]
-if.app-id = 'com.microsoft.Outlook'
-run = 'move-node-to-workspace A'
-
-# Gemini
 [[on-window-detected]]
 if.app-id = 'com.google.gemini'
 run = 'move-node-to-workspace A'
 
+[[on-window-detected]]
+if.app-id = 'com.microsoft.copilot'
+run = 'move-node-to-workspace A'
 
-# ============================================================
-# NOTE-TAKING APPLICATIONS -> N
-# ============================================================
+[[on-window-detected]]
+if.app-id = 'bot.cline.app'
+run = 'move-node-to-workspace A'
 
-# Apple Notes
+[[on-window-detected]]
+if.app-id = 'ai.opencode.desktop'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.electron.ollama'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.m365copilot'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Word'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Excel'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Powerpoint'
+run = 'move-node-to-workspace A'
+
+[[on-window-detected]]
+if.app-id = 'com.microsoft.Outlook'
+run = 'move-node-to-workspace A'
+
+# Notes -> N
 [[on-window-detected]]
 if.app-id = 'com.apple.Notes'
 run = 'move-node-to-workspace N'
 
-# Obsidian
 [[on-window-detected]]
 if.app-id = 'md.obsidian'
 run = 'move-node-to-workspace N'
 
-# Notion
+[[on-window-detected]]
+if.app-id = 'org.zotero.zotero'
+run = 'move-node-to-workspace N'
+
 [[on-window-detected]]
 if.app-id = 'notion.id'
 run = 'move-node-to-workspace N'
 
-# Notion Calendar
 [[on-window-detected]]
 if.app-id = 'notion.calendar'
 run = 'move-node-to-workspace N'
 
-# Bear
 [[on-window-detected]]
 if.app-id = 'net.shinyfrog.bear'
 run = 'move-node-to-workspace N'
 
-# Notability
 [[on-window-detected]]
 if.app-id = 'com.gingerlabs.Notability'
 run = 'move-node-to-workspace N'
 
-# Evernote
 [[on-window-detected]]
 if.app-id = 'com.evernote.Evernote'
 run = 'move-node-to-workspace N'
 
-# Microsoft OneNote
 [[on-window-detected]]
 if.app-id = 'com.microsoft.onenote.mac'
 run = 'move-node-to-workspace N'
 
-
-# ============================================================
-# FINDER -> 1
-# ============================================================
-
-# Finder always opens as a floating window in the current workspace.
+# Floating (stays on the current workspace)
 [[on-window-detected]]
 if.app-id = 'com.apple.finder'
 run = 'layout floating'
 
+[[on-window-detected]]
+if.app-id = 'com.apple.systempreferences' # System Settings
+run = 'layout floating'
 
-# ============================================================
-# FLOATING APPLICATIONS
-# ============================================================
-
-# Shottr should open as a floating window.
 [[on-window-detected]]
 if.app-id = 'cc.ffitch.shottr'
 run = 'layout floating'
 
-# System Settings and legacy System Preferences should open as floating.
 [[on-window-detected]]
-if.app-id = 'com.apple.systempreferences'
+if.app-id = 'net.freemacsoft.AppCleaner'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.SystemPreferences'
-run = 'layout floating'
-
-# Control Center and Notification Center windows should stay floating.
-[[on-window-detected]]
-if.app-id = 'com.apple.controlcenter'
+if.app-id = 'com.alienator88.Pearcleaner'
 run = 'layout floating'
 
 [[on-window-detected]]
-if.app-id = 'com.apple.notificationcenterui'
+if.app-id = 'com.lujjjh.LinearMouse'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'io.tailscale.ipn.macsys'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.aptonic.Dropzone4'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'io.getpurge.app'
+run = 'layout floating'
+
+[[on-window-detected]]
+if.app-id = 'com.sarensx.MacPacker'
 run = 'layout floating'
 
 
-
-
-# ============================================================
-# WORKSPACE TO MONITOR ASSIGNMENT
-# IMPORTANT: KEEP THIS AT THE ABSOLUTE BOTTOM OF THE FILE
-# ============================================================
+# ---------- Workspace -> monitor ----------
+# Must stay last: every key below a [table] header belongs to that table.
 
 [workspace-to-monitor-force-assignment]
-
-# Always use the MacBook display.
+# Always on the MacBook display
 I = 'Built-in Retina Display'
 B = 'Built-in Retina Display'
 T = 'Built-in Retina Display'
 S = 'Built-in Retina Display'
-
-# Prefer the external monitor.
-# Fall back to the MacBook when the external monitor is absent.
+# External monitor if connected, otherwise the MacBook
 N = ['secondary', 'Built-in Retina Display']
 A = ['secondary', 'Built-in Retina Display']
 1 = ['secondary', 'Built-in Retina Display']
