@@ -22,12 +22,15 @@ local cal = sbar.add("item", {
   },
   position = "right",
   update_freq = 30,
-  padding_left = 1,
-  padding_right = 1,
+  -- Same geometry as the workspace pills: bracket height 30 = 26 + 2 * padding 2,
+  -- inner radius 5 = bracket radius 7 - 2, no inner border.
+  padding_left = 2,
+  padding_right = 2,
   background = {
     color = colors.bg2,
-    border_color = colors.black,
-    border_width = 1
+    height = 26,
+    border_width = 0,
+    corner_radius = 5,
   },
   click_script = "open -a 'Calendar'"
 })
@@ -38,6 +41,7 @@ sbar.add("bracket", { cal.name }, {
     color = colors.transparent,
     height = 30,
     border_color = colors.purple_soft,
+    corner_radius = 7,
   }
 })
 
