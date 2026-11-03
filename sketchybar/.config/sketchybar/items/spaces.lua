@@ -29,13 +29,16 @@ for _, workspace_name in ipairs(workspace_names) do
       font = "sketchybar-app-font:Regular:16.0",
       y_offset = -1,
     },
-    padding_right = 1,
-    padding_left = 1,
+    -- Bracket height must equal background.height (26) + 2 * padding (2) = 30,
+    -- so the outline ring is the same thickness on all four sides.
+    padding_right = 2,
+    padding_left = 2,
     background = {
       color = colors.bg1,
-      border_width = 1,
+      border_width = 0,
       height = 26,
-      border_color = colors.black,
+      -- outer ring radius (7, set on the bracket below) minus the 2pt gap, so corners stay concentric
+      corner_radius = 5,
     },
     popup = { background = { border_width = 5, border_color = colors.black } }
   })
@@ -47,8 +50,9 @@ for _, workspace_name in ipairs(workspace_names) do
     background = {
       color = colors.transparent,
       border_color = colors.purple_dim,
-      height = 28,
-      border_width = 2
+      height = 30,
+      border_width = 2,
+      corner_radius = 7,
     }
   })
   workspace_brackets[workspace_name] = space_bracket
@@ -74,14 +78,13 @@ local function update_highlight(focused_workspace)
       label = { highlight = selected },
       background = {
         color = selected and colors.purple_bg or colors.bg1,
-        border_color = selected and colors.black or colors.bg2,
       }
     })
     workspace_brackets[workspace_name]:set({
       background = {
         border_color = selected and colors.purple or colors.purple_dim,
         border_width = selected and 4 or 2,
-        height = selected and 32 or 28,
+        height = 30,
       }
     })
   end
