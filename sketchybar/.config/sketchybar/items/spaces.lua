@@ -87,20 +87,27 @@ local function update_highlight(focused_workspace)
   end
 end
 
+-- One aerospace call for all workspaces instead of one per workspace
 local function update_app_icons()
-  for _, workspace_name in ipairs(workspace_names) do
-    sbar.exec("aerospace list-windows --workspace " .. workspace_name, function(output)
-      local applications = {}
-      local application_icons = {}
+  sbar.exec("aerospace list-windows --all --format '%{workspace}|%{app-name}'", function(output)
+    local seen = {}
+    local icons_by_workspace = {}
+    for _, workspace_name in ipairs(workspace_names) do
+      seen[workspace_name] = {}
+      icons_by_workspace[workspace_name] = {}
+    end
 
-      for raw_application_name in output:gmatch("%d+%s*|%s*([^|]+)%s*|") do
-        local application_name = raw_application_name:gsub("^%s+", ""):gsub("%s+$", "")
-        if not applications[application_name] then
-          applications[application_name] = true
-          table.insert(application_icons, app_icons[application_name] or app_icons["Default"])
-        end
+    for workspace_name, raw_application_name in output:gmatch("([^|\r\n]+)|([^\r\n]*)") do
+      local application_name = raw_application_name:gsub("^%s+", ""):gsub("%s+$", "")
+      local seen_apps = seen[workspace_name]
+      if seen_apps and application_name ~= "" and not seen_apps[application_name] then
+        seen_apps[application_name] = true
+        table.insert(icons_by_workspace[workspace_name], app_icons[application_name] or app_icons["Default"])
       end
+    end
 
+    for _, workspace_name in ipairs(workspace_names) do
+      local application_icons = icons_by_workspace[workspace_name]
       workspace_items[workspace_name]:set({
         label = {
           string = table.concat(application_icons, " "),
@@ -108,8 +115,8 @@ local function update_app_icons()
           padding_right = #application_icons > 0 and 8 or 0,
         }
       })
-    end)
-  end
+    end
+  end)
 end
 
 local workspace_observer = sbar.add("item", {
