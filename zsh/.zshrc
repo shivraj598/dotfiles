@@ -188,3 +188,8 @@ ssh() {
 
 # Added by Antigravity IDE
 export PATH="/Users/shivrajtimilsena/.antigravity-ide/antigravity-ide/bin:$PATH"
+
+# Added by LM Studio CLI (lms)
+export PATH="$PATH:/Users/shivrajtimilsena/.lmstudio/bin"
+# End of LM Studio CLI section
+
