@@ -193,3 +193,12 @@ export PATH="/Users/shivrajtimilsena/.antigravity-ide/antigravity-ide/bin:$PATH"
 export PATH="$PATH:/Users/shivrajtimilsena/.lmstudio/bin"
 # End of LM Studio CLI section
 
+
+
+# Herd injected PHP 8.6 configuration.
+export HERD_PHP_86_INI_SCAN_DIR="/Users/shivrajtimilsena/Library/Application Support/Herd/config/php/86"
+
+
+# Herd injected PHP 8.2 configuration.
+export HERD_PHP_82_INI_SCAN_DIR="/Users/shivrajtimilsena/Library/Application Support/Herd/config/php/82"
+export PATH="$HOME/Library/Application Support/Herd/bin:$PATH"
