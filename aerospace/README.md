@@ -22,9 +22,9 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `B` | Browser |
 | `T` | Terminal |
 | `N` | Notes (Apple Notes, Obsidian, Notion) |
-| `S` | Socials (WhatsApp, Telegram, etc.) |
-| `A` | AI / Chatbots (Claude, Copilot, Office 365) |
-| `1`–`5` | Additional workspaces |
+| `S` | Socials (WhatsApp, Telegram, Discord, etc.) |
+| `A` | AI / Chatbots (Claude, ChatGPT, Copilot) + Microsoft Office |
+| `1`–`2` | Additional workspaces |
 
 ---
 
@@ -75,7 +75,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `Opt + N` | Notes workspace |
 | `Opt + S` | Socials workspace |
 | `Opt + A` | AI / Chatbots workspace |
-| `Opt + 1`–`5` | Additional workspaces 1–5 |
+| `Opt + 1`–`2` | Additional workspaces 1–2 |
 
 ### Move windows to workspaces
 
@@ -87,7 +87,7 @@ AeroSpace starts at login and auto-reloads the config when saved.
 | `Opt + Shift + N` | Move window to Notes and follow |
 | `Opt + Shift + S` | Move window to Socials and follow |
 | `Opt + Shift + A` | Move window to AI / Chatbots and follow |
-| `Opt + Shift + 1`–`5` | Move window to workspace 1–5 and follow |
+| `Opt + Shift + 1`–`2` | Move window to workspace 1–2 and follow |
 
 ### Workspace navigation
 
@@ -113,9 +113,17 @@ AeroSpace starts at login and auto-reloads the config when saved.
 ## Automatic App Assignment
 
 - **Terminals** (Ghostty, Terminal, iTerm2, WezTerm) → `T`
-- **IDEs** (VS Code, Cursor, Zed, VSCodium, Windsurf, iPhone Simulator) → `I`
+- **IDEs** (VS Code, Cursor, Zed, VSCodium, Windsurf, Antigravity, T3 Code, iPhone Simulator) → `I`
 - **Browsers** (Safari, Chrome, Brave, Arc, Chromium, Zen) → `B`
-- **Shottr** opens floating
-- `I`, `B`, `T` forced to the MacBook display; `1`–`5` prefer the external monitor
+- **Notes** (Apple Notes, Obsidian, Zotero, Notion, Bear, Notability, Evernote, OneNote) → `N`
+- **Socials** (WhatsApp, Telegram, Discord, Slack, Signal, WeChat, FaceTime) → `S`
+- **AI / Office** (Claude, ChatGPT, Gemini, Copilot, Cline, OpenCode, Ollama, Word, Excel, PowerPoint, Outlook) → `A`
+- **Floating** on the current workspace: Finder, System Settings, Shottr, AppCleaner, Pearcleaner, LinearMouse, Tailscale, Dropzone, Purge, MacPacker
+
+Find an app's ID with `osascript -e 'id of app "AppName"'`.
+
+## Monitors and integrations
+
+- `I`, `B`, `T`, `S` are forced to the MacBook display; `N`, `A`, `1`, `2` prefer the external monitor and fall back to the MacBook
 - Launches **JankyBorders** (`borders`) on startup
-- Triggers a **SketchyBar** `aerospace_workspace_change` event on workspace switch
+- Triggers a **SketchyBar** `aerospace_workspace_change` event on workspace switch (workspace list must match `sketchybar/items/spaces.lua`)
