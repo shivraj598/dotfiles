@@ -5,10 +5,8 @@ My dotfiles are managed using GNU Stow.
 ## Basic workflow
 
 1. Find the application's original config
-2. Move the config into `~/dotfiles`
-3. Stow the package to create the symlink
-4. Use stow for the symlink
-5. with ./config/nvim , ./config/tmux. etc or direct it symlink with default config folder. 
+2. Move it into `~/dotfiles/<package>/`, mirroring its path relative to `$HOME` (e.g. `~/dotfiles/nvim/.config/nvim`, `~/dotfiles/zsh/.zshrc`)
+3. Run `stow <package>` from `~/dotfiles` to symlink it back into place
 
 
 ---
